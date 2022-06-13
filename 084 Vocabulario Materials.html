@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>084 Vocabulario Materials</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 4, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796290, "assessment_type": "multiple-choice", "created": "2016-01-07T12:20:32Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["plastic", "cardboard", "metal"], "question": "<p>cart\u00f3n</p>"}, "correct_response": ["b"], "updated": "2016-01-07T12:20:32Z", "section": "", "question_plain": "cart\u00f3n", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796292, "assessment_type": "multiple-choice", "created": "2016-01-07T12:21:05Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["plata", "carton", "oro"], "question": "<p>silver</p>"}, "correct_response": ["a"], "updated": "2016-01-07T12:21:05Z", "section": "", "question_plain": "silver", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796294, "assessment_type": "multiple-choice", "created": "2016-01-07T12:21:31Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["wool", "cardboard", "gold"], "question": "<p>lana</p>"}, "correct_response": ["a"], "updated": "2016-01-07T12:21:31Z", "section": "", "question_plain": "lana", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796296, "assessment_type": "multiple-choice", "created": "2016-01-07T12:21:59Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["silver", "gold", "wool"], "question": "<p>oro</p>"}, "correct_response": ["b"], "updated": "2016-01-07T12:21:59Z", "section": "", "question_plain": "oro", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

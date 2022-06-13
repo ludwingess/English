@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>038 Vocabulario Adjectives</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795492, "assessment_type": "multiple-choice", "created": "2016-01-06T19:03:17Z", "prompt": {"answers": ["awake", "afraid", "naughty"], "relatedLectureIds": "", "question": "<p>tener miedo</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:03:17Z", "section": "", "question_plain": "tener miedo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795494, "assessment_type": "multiple-choice", "created": "2016-01-06T19:04:03Z", "prompt": {"answers": ["empty", "excited", "weak"], "relatedLectureIds": "", "question": "<p>vaci\u00f3</p>", "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T19:04:03Z", "section": "", "question_plain": "vaci\u00f3", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795496, "assessment_type": "multiple-choice", "created": "2016-01-06T19:04:32Z", "prompt": {"answers": ["another", "all", "other"], "relatedLectureIds": "", "question": "<p>todo</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:04:32Z", "section": "", "question_plain": "todo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795498, "assessment_type": "multiple-choice", "created": "2016-01-06T19:05:00Z", "prompt": {"answers": ["enough", "awake", "fine"], "relatedLectureIds": "", "question": "<p>estar despierto</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:05:00Z", "section": "", "question_plain": "estar despierto", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795500, "assessment_type": "multiple-choice", "created": "2016-01-06T19:05:30Z", "prompt": {"answers": ["excited", "squared", "blonde"], "relatedLectureIds": "", "question": "<p>rubio</p>", "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2016-01-06T19:05:30Z", "section": "", "question_plain": "rubio", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795502, "assessment_type": "multiple-choice", "created": "2016-01-06T19:06:05Z", "prompt": {"answers": ["top", "enough", "empty"], "relatedLectureIds": "", "question": "<p>suficiente</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:06:05Z", "section": "", "question_plain": "suficiente", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795504, "assessment_type": "multiple-choice", "created": "2016-01-06T19:06:44Z", "prompt": {"answers": ["weak", "afraid", "fine"], "relatedLectureIds": "", "question": "<p>flojo</p>", "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T19:06:44Z", "section": "", "question_plain": "flojo", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

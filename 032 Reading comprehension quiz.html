@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>032 Reading comprehension quiz</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796680, "assessment_type": "multiple-choice", "created": "2016-01-07T18:22:11Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>When\ndid Johnny\nDepp leave\nschool?</p>", "answers": ["In Florida", "When he was 15", "When he moved to Los Angeles", "When he was born"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T18:22:11Z", "section": "", "question_plain": "When\ndid Johnny\nDepp leave\nschool?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796686, "assessment_type": "multiple-choice", "created": "2016-01-07T18:22:46Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>When\nhe was young, what did he want to do in his life?</p>", "answers": ["He wanted to become an actor", "He wanted to become a musician", "He wanted to move to Los Angeles", "He wanted to meet famous actors"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T18:22:46Z", "section": "", "question_plain": "When\nhe was young, what did he want to do in his life?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796692, "assessment_type": "multiple-choice", "created": "2016-01-07T18:24:58Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>Where\ndid he start acting?</p>", "answers": ["In Florida", "In a movie with Nicholas Cage", "In a movie called Nightmare on Elm Street", "In a movie called Nightmare on Elm Street with his band"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:24:58Z", "section": "", "question_plain": "Where\ndid he start acting?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796696, "assessment_type": "multiple-choice", "created": "2016-01-07T18:25:29Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>Where\ndid Brad Pitt go to find an acting job?</p>", "answers": ["To a university", "To a restaurant", "To California", "To a fast food restaurant"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:25:29Z", "section": "", "question_plain": "Where\ndid Brad Pitt go to find an acting job?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796700, "assessment_type": "multiple-choice", "created": "2016-01-07T18:26:05Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>What\njobs did he do before he was famous?</p>", "answers": ["Actor", "Waiter", "Journalist", "Singer"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T18:26:05Z", "section": "", "question_plain": "What\njobs did he do before he was famous?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796704, "assessment_type": "multiple-choice", "created": "2016-01-07T18:26:44Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>When\ndid Sandra Bullock decide that she wanted to work in New York?</p>", "answers": ["After university", "Before university", "At university", "When she moved to New York"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T18:26:44Z", "section": "", "question_plain": "When\ndid Sandra Bullock decide that she wanted to work in New York?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796706, "assessment_type": "multiple-choice", "created": "2016-01-07T18:27:23Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>Did\nSandra Bullock study acting?</p>", "answers": ["Yes, at university only", "Yes, at the film \u201cSpeed\u201d.", "Yes, at university and in New York.", "No"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:27:23Z", "section": "", "question_plain": "Did\nSandra Bullock study acting?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

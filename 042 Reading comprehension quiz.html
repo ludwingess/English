@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>042 Reading comprehension quiz</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 9, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796710, "assessment_type": "multiple-choice", "created": "2016-01-07T18:28:56Z", "prompt": {"relatedLectureIds": "", "question": "<p>Where\nis Jim having the party?</p>", "feedbacks": ["", "", "", ""], "answers": ["At his friends\u00b4 house.", "At the store", "At his grandparents\u00b4 house.", "At his house"]}, "correct_response": ["d"], "updated": "2016-01-07T18:28:56Z", "section": "", "question_plain": "Where\nis Jim having the party?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796712, "assessment_type": "multiple-choice", "created": "2016-01-07T18:29:27Z", "prompt": {"relatedLectureIds": "", "question": "<p>What\ndo I bring to the party?</p>", "answers": ["A cake", "Some food", "A video game", "A present"], "feedbacks": ["", "", "", ""]}, "correct_response": ["d"], "updated": "2016-01-07T18:29:27Z", "section": "", "question_plain": "What\ndo I bring to the party?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796714, "assessment_type": "multiple-choice", "created": "2016-01-07T18:30:04Z", "prompt": {"relatedLectureIds": "", "question": "<p>What\ndoes Jim's sister give him?</p>", "answers": ["a baseball jersey", "a bike", "a game", "Some money"], "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:30:04Z", "section": "", "question_plain": "What\ndoes Jim's sister give him?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796716, "assessment_type": "multiple-choice", "created": "2016-01-07T18:30:44Z", "prompt": {"relatedLectureIds": "", "question": "<p>How\ndoes Jim feel about his presents?</p>", "feedbacks": ["", "", ""], "answers": ["He likes the camera best.", "He likes the bike best.", "He likes the money best."]}, "correct_response": ["c"], "updated": "2016-01-07T18:30:44Z", "section": "", "question_plain": "How\ndoes Jim feel about his presents?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796718, "assessment_type": "multiple-choice", "created": "2016-01-07T18:31:17Z", "prompt": {"relatedLectureIds": "", "question": "<p>What\nis one of the things Jim dreams of buying?</p>", "answers": ["a bike", "a camera", "a key chain", "a basketeball jersey"], "feedbacks": ["", "", "", ""]}, "correct_response": ["b"], "updated": "2016-01-07T18:31:17Z", "section": "", "question_plain": "What\nis one of the things Jim dreams of buying?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796720, "assessment_type": "multiple-choice", "created": "2016-01-07T18:31:48Z", "prompt": {"relatedLectureIds": "", "question": "<p>When\ndoes Jim want to go to the store?</p>", "answers": ["He wants to go tomorrow.", "He wants to go next morning.", "He wants to go during the party.", "He doesn\u00b4t mind going tomorrow."], "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:31:48Z", "section": "", "question_plain": "When\ndoes Jim want to go to the store?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796722, "assessment_type": "multiple-choice", "created": "2016-01-07T18:32:25Z", "prompt": {"relatedLectureIds": "", "question": "<p>What\ndoesn't Jim know?</p>", "answers": ["that the store is closed", "that his baseball jersey is too big", "that most things he wants cost more than 30 dollars", "that his sister has more money than he does"], "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:32:25Z", "section": "", "question_plain": "What\ndoesn't Jim know?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796724, "assessment_type": "multiple-choice", "created": "2016-01-07T18:33:02Z", "prompt": {"relatedLectureIds": "", "question": "<p>Who\ngoes with Jim to the store?</p>", "feedbacks": ["", "", "", ""], "answers": ["his grandma", "his father", "his sister", "his uncle"]}, "correct_response": ["c"], "updated": "2016-01-07T18:33:02Z", "section": "", "question_plain": "Who\ngoes with Jim to the store?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796728, "assessment_type": "multiple-choice", "created": "2016-01-07T18:33:48Z", "prompt": {"relatedLectureIds": "", "question": "<p>How\nmuch money does Jim have left after buying the CD?</p>", "answers": ["$20", "$30 ", "$10 ", "$15"], "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:33:48Z", "section": "", "question_plain": "How\nmuch money does Jim have left after buying the CD?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

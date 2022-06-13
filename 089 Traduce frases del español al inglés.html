@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>089 Traduce frases del español al inglés</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 800894, "assessment_type": "multiple-choice", "created": "2016-01-11T12:44:16Z", "prompt": {"answers": ["You don\u00b4t make me to cry!", "Don\u00b4t make me sad!", "Don\u00b4t make me cry!", "Don\u00b4t make me to cry!"], "question": "<p>No me hagas llorar</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-11T12:44:16Z", "section": "", "question_plain": "No me hagas llorar", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800896, "assessment_type": "multiple-choice", "created": "2016-01-11T12:45:06Z", "prompt": {"answers": ["Is she good of anything?", "Is she good in anything?", "Is she good on anything?", "Is she good at anything?"], "question": "<p>Es ella buena en algo?</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["d"], "updated": "2016-01-11T12:45:06Z", "section": "", "question_plain": "Es ella buena en algo?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800900, "assessment_type": "multiple-choice", "created": "2016-01-11T12:45:45Z", "prompt": {"answers": ["I haven\u00b4t finished my project yet", "I haven\u00b4t already finished my project", "I haven\u00b4t finished my project now"], "question": "<p>No he acabado mi proyecto a\u00fan</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:45:45Z", "section": "", "question_plain": "No he acabado mi proyecto a\u00fan", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800904, "assessment_type": "multiple-choice", "created": "2016-01-11T12:46:37Z", "prompt": {"answers": ["I have already made my bed", "I have already make my bed", "I have just made my bed", "I have made my bed yet"], "question": "<p>Ya he hecho mi cama</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:46:37Z", "section": "", "question_plain": "Ya he hecho mi cama", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800906, "assessment_type": "multiple-choice", "created": "2016-01-11T12:47:18Z", "prompt": {"answers": ["I was hiding behind the wall", "I was hiding below the wall", "I was hiding between the wall", "I was hidding behind the wall"], "question": "<p>Me estaba escondiendo detras de la pared</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:47:18Z", "section": "", "question_plain": "Me estaba escondiendo detras de la pared", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800908, "assessment_type": "multiple-choice", "created": "2016-01-11T12:48:07Z", "prompt": {"answers": ["You shouldn\u00b4t smoke", "You haven\u00b4t to smoke", "You don\u00b4t have to smoke", "You shouldn\u00b4t to smoke"], "question": "<p>Tu no deberias fumar</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:48:07Z", "section": "", "question_plain": "Tu no deberias fumar", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800910, "assessment_type": "multiple-choice", "created": "2016-01-11T12:48:42Z", "prompt": {"answers": ["You are very good in baseball", "You are very good on baseball", "You are very good at baseball"], "question": "<p>Tu eres muy bueno en beisbol</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-11T12:48:42Z", "section": "", "question_plain": "Tu eres muy bueno en beisbol", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800916, "assessment_type": "multiple-choice", "created": "2016-01-11T12:50:21Z", "prompt": {"answers": ["Can you make me a favour?", "Can you do me a favour?"], "question": "<p>Me puedes hacer un favor?</p>", "feedbacks": ["", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T12:50:21Z", "section": "", "question_plain": "Me puedes hacer un favor?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>088 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 800874, "assessment_type": "multiple-choice", "created": "2016-01-11T12:36:18Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>You look like your brother</p>", "answers": ["Parece que te gusta tu hermano", "Tu te pareces a tu hermano", "Tu hermano se parece a ti"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T12:36:18Z", "section": "", "question_plain": "You look like your brother", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800876, "assessment_type": "multiple-choice", "created": "2016-01-11T12:37:41Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>I feel like going to the cinema</p>", "answers": ["Me apetece ir al cine", "Me gusta mucho ir al cine", "Siento que voy al cine"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:37:41Z", "section": "", "question_plain": "I feel like going to the cinema", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800880, "assessment_type": "multiple-choice", "created": "2016-01-11T12:39:14Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>What is the matter with you?</p>", "answers": ["Que pasa contigo?", "Que es lo que te importa a ti?", "Que esta ocurriendo?"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:39:14Z", "section": "", "question_plain": "What is the matter with you?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800884, "assessment_type": "multiple-choice", "created": "2016-01-11T12:39:49Z", "prompt": {"feedbacks": ["", ""], "question": "<p>How about watching a movie tonight?</p>", "answers": ["Que tal ver una pel\u00edcula esta noche?", "C\u00f3mo vamos a ver una pel\u00edcula esta noche?"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:39:49Z", "section": "", "question_plain": "How about watching a movie tonight?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800886, "assessment_type": "multiple-choice", "created": "2016-01-11T12:40:31Z", "prompt": {"feedbacks": ["", ""], "question": "<p>She is good at basket</p>", "answers": ["Ella es buena en el basquet", "Es bueno que ella juegue a basquet"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:40:31Z", "section": "", "question_plain": "She is good at basket", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800888, "assessment_type": "multiple-choice", "created": "2016-01-11T12:41:34Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>She always makes me laugh</p>", "answers": ["Ella siempre me hace reir", "Ella siempre hace sonre\u00edr", "Ella siempre me hace silbar"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T12:41:34Z", "section": "", "question_plain": "She always makes me laugh", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800890, "assessment_type": "multiple-choice", "created": "2016-01-11T12:42:22Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>You are making me sad</p>", "answers": ["Me haces triste", "Me estas poniendo triste", "Te estoy poniendo triste"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T12:42:22Z", "section": "", "question_plain": "You are making me sad", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800892, "assessment_type": "multiple-choice", "created": "2016-01-11T12:43:11Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>A book is made of paper</p>", "answers": ["Un libro es como de papel", "Un libro esta hecho de papel", "Un libro hace papeles"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T12:43:11Z", "section": "", "question_plain": "A book is made of paper", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

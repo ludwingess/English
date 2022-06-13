@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>008 Traduce frases del español al inglés</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 9, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 797972, "assessment_type": "multiple-choice", "created": "2016-01-08T17:16:39Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["Can you answer the question?", "Can you ask the question?", "Can you remember the question?"], "question": "<p>Puedes responder la pregunta?</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-08T17:16:39Z", "section": "", "question_plain": "Puedes responder la pregunta?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797974, "assessment_type": "multiple-choice", "created": "2016-01-08T17:17:20Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["I don\u00b4t mind go shopping", "I don\u00b4t mind going shop", "I don\u00b4t mind going shopping"], "question": "<p>No me importa ir de compras</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-08T17:17:20Z", "section": "", "question_plain": "No me importa ir de compras", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797976, "assessment_type": "multiple-choice", "created": "2016-01-08T17:17:54Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["He rides a bike", "He hides a bike", "He skips a bike"], "question": "<p>El monta en bici</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-08T17:17:54Z", "section": "", "question_plain": "El monta en bici", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797978, "assessment_type": "multiple-choice", "created": "2016-01-08T17:18:59Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["She doesn\u00b4t plays the piano", "She doesn\u00b4t play the piano", "She don\u00b4t play the piano", "She not play the piano"], "question": "<p>Ella no toca el piano</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-08T17:18:59Z", "section": "", "question_plain": "Ella no toca el piano", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797980, "assessment_type": "multiple-choice", "created": "2016-01-08T17:19:34Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["My dad is strongest than my mom", "My dad is the stronger than my mom", "My dad is stronger than my mom"], "question": "<p>Mi padre es mas fuerte que mi madre</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-08T17:19:34Z", "section": "", "question_plain": "Mi padre es mas fuerte que mi madre", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797982, "assessment_type": "multiple-choice", "created": "2016-01-08T17:20:46Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["I am skinny", "I am scared", "I am hungry"], "question": "<p>Tengo miedo</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-08T17:20:46Z", "section": "", "question_plain": "Tengo miedo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797984, "assessment_type": "multiple-choice", "created": "2016-01-08T17:22:13Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["The place is dirty", "The playground is dirty", "The playground is busy", "The place is busy"], "question": "<p>El patio esta sucio</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-08T17:22:13Z", "section": "", "question_plain": "El patio esta sucio", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797986, "assessment_type": "multiple-choice", "created": "2016-01-08T17:22:55Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["Are you listening to me?", "Do you listen to me?", "Do you listening to me?"], "question": "<p>Me estas escuchando?</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-08T17:22:55Z", "section": "", "question_plain": "Me estas escuchando?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797988, "assessment_type": "multiple-choice", "created": "2016-01-08T17:24:40Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["He is coming home on Thursday", "He come home on Thursday", "He is taking home on thursday", "He is hurting home on thursday"], "question": "<p>El vendr\u00e1 a casa el jueves</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-08T17:24:40Z", "section": "", "question_plain": "El vendr\u00e1 a casa el jueves", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

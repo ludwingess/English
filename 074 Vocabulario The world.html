@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>074 Vocabulario The world</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796202, "assessment_type": "multiple-choice", "created": "2016-01-07T11:50:26Z", "prompt": {"answers": ["ambiente", "carretera", "campo"], "question": "<p>country(side)</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T11:50:26Z", "section": "", "question_plain": "country(side)", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796204, "assessment_type": "multiple-choice", "created": "2016-01-07T11:51:00Z", "prompt": {"answers": ["el suelo", "lago", "pueblo"], "question": "<p>ground</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T11:51:00Z", "section": "", "question_plain": "ground", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796206, "assessment_type": "multiple-choice", "created": "2016-01-07T11:51:33Z", "prompt": {"answers": ["arena", "luna", "playa"], "question": "<p>moon</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T11:51:33Z", "section": "", "question_plain": "moon", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796208, "assessment_type": "multiple-choice", "created": "2016-01-07T11:52:10Z", "prompt": {"answers": ["arena", "calle", "pueblo"], "question": "<p>sand</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T11:52:10Z", "section": "", "question_plain": "sand", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796210, "assessment_type": "multiple-choice", "created": "2016-01-07T11:52:54Z", "prompt": {"answers": ["madera", "cascada", "espacio"], "question": "<p>wood</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T11:52:54Z", "section": "", "question_plain": "wood", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796212, "assessment_type": "multiple-choice", "created": "2016-01-07T11:53:46Z", "prompt": {"answers": ["pueblecito", "arena", "cesped"], "question": "<p>village</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T11:53:46Z", "section": "", "question_plain": "village", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

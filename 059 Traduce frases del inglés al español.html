@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>059 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 800722, "assessment_type": "multiple-choice", "created": "2016-01-11T11:49:18Z", "prompt": {"question": "<p>She will come here later</p>", "feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Ella estar\u00e1 aqu\u00ed mas tarde", "Ella vendra aqu\u00ed mas tarde", "Ella ir\u00e1 all\u00ed mas tarde"]}, "correct_response": ["b"], "updated": "2016-01-11T11:49:18Z", "section": "", "question_plain": "She will come here later", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800724, "assessment_type": "multiple-choice", "created": "2016-01-11T11:50:24Z", "prompt": {"question": "<p>He won\u00b4t drive tonight</p>", "feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["El no conducir\u00e1 esta noche", "El no beber\u00e1 esta noche", "El no conducir\u00e1 ma\u00f1ana"]}, "correct_response": ["a"], "updated": "2016-01-11T11:50:24Z", "section": "", "question_plain": "He won\u00b4t drive tonight", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800726, "assessment_type": "multiple-choice", "created": "2016-01-11T11:51:22Z", "prompt": {"question": "<p>They won\u00b4t be here tomorrow</p>", "feedbacks": ["", "", ""], "answers": ["Ellos no estaran all\u00ed ma\u00f1ana", "Ellos no ser\u00e1n  felices ma\u00f1ana", "Ellos no estar\u00e1n aqu\u00ed ma\u00f1ana"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-11T11:51:22Z", "section": "", "question_plain": "They won\u00b4t be here tomorrow", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800728, "assessment_type": "multiple-choice", "created": "2016-01-11T11:52:33Z", "prompt": {"question": "<p>Will you clean your room later?</p>", "feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Limpiaras tu habitaci\u00f3n mas tarde?", "Limpiaras tu habitaci\u00f3n ma\u00f1ana?", "Limpiaras tu habitaci\u00f3n mas temprano?"]}, "correct_response": ["a"], "updated": "2016-01-11T11:52:33Z", "section": "", "question_plain": "Will you clean your room later?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800730, "assessment_type": "multiple-choice", "created": "2016-01-11T11:53:28Z", "prompt": {"question": "<p>They won\u00b4t  forget you</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": "", "answers": ["Ellos no te perdonar\u00e1n", "Ellos no te olvidaran", "Ellos no te desear\u00e1n", "Ellos no te conocer\u00e1n"]}, "correct_response": ["b"], "updated": "2016-01-11T11:53:28Z", "section": "", "question_plain": "They won\u00b4t  forget you", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800732, "assessment_type": "multiple-choice", "created": "2016-01-11T11:54:45Z", "prompt": {"question": "<p>You will meet nice people</p>", "feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Conocer\u00e1s gente sencilla", "Conocer\u00e1s gente buena", "Hablar\u00e1s con gente buena"]}, "correct_response": ["b"], "updated": "2016-01-11T11:54:45Z", "section": "", "question_plain": "You will meet nice people", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

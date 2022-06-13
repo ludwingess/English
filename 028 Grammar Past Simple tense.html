@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>028 Grammar Past Simple tense</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 803970, "assessment_type": "multiple-choice", "created": "2016-01-13T15:08:01Z", "prompt": {"question": "<ul><li>We <span> (stay) in a very quiet room.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["stayied", "stayed", "stood"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:08:01Z", "section": "", "question_plain": "We  (stay) in a very quiet room.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803976, "assessment_type": "multiple-choice", "created": "2016-01-13T15:09:01Z", "prompt": {"question": "<ul><li>I <span> (have) a dog when I was a kid.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["have", "haved", "had"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T15:09:01Z", "section": "", "question_plain": "I  (have) a dog when I was a kid.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803980, "assessment_type": "multiple-choice", "created": "2016-01-13T15:09:43Z", "prompt": {"question": "<ul><li>I <span> (work) eight hours yesterday.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["didn\u00b4t worked", "worked", "was work"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:09:43Z", "section": "", "question_plain": "I  (work) eight hours yesterday.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803982, "assessment_type": "multiple-choice", "created": "2016-01-13T15:10:09Z", "prompt": {"question": "<ul><li>They <span>  (go) to Rome last summer.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["goed", "gone", "went"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T15:10:09Z", "section": "", "question_plain": "They   (go) to Rome last summer.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803986, "assessment_type": "multiple-choice", "created": "2016-01-13T15:10:42Z", "prompt": {"question": "<ul><li>I <span> (paint) the room last week.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["painted", "didn\u00b4t painted", "was painted"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T15:10:42Z", "section": "", "question_plain": "I  (paint) the room last week.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803990, "assessment_type": "multiple-choice", "created": "2016-01-13T15:11:09Z", "prompt": {"question": "<ul><li>He <span> (meet) a lot of people during the show.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["meet", "meeted", "met"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T15:11:09Z", "section": "", "question_plain": "He  (meet) a lot of people during the show.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803994, "assessment_type": "multiple-choice", "created": "2016-01-13T15:11:45Z", "prompt": {"question": "<ul><li>It <span> (rain) for three days last month.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["raint", "rained", "was rain"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:11:45Z", "section": "", "question_plain": "It  (rain) for three days last month.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803996, "assessment_type": "multiple-choice", "created": "2016-01-13T15:12:23Z", "prompt": {"question": "<ul><li>Madonna <span> (play) in London last month.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["played", "plaiyed", "didn\u00b4t played"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T15:12:23Z", "section": "", "question_plain": "Madonna  (play) in London last month.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803998, "assessment_type": "multiple-choice", "created": "2016-01-13T15:12:47Z", "prompt": {"question": "<ul><li>We <span> (eat) pasta last night.</span></li></ul>", "feedbacks": ["", "", ""], "answers": ["eated", "ate", "eaten"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:12:47Z", "section": "", "question_plain": "We  (eat) pasta last night.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804002, "assessment_type": "multiple-choice", "created": "2016-01-13T15:13:22Z", "prompt": {"question": "<p>I <span> (see) your brother at the shopping center yesterday.</span></p>", "feedbacks": ["", "", ""], "answers": ["seed", "saw", "said"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:13:22Z", "section": "", "question_plain": "I  (see) your brother at the shopping center yesterday.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

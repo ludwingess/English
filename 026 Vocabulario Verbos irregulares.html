@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>026 Vocabulario Verbos irregulares</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795406, "assessment_type": "multiple-choice", "created": "2016-01-06T18:22:46Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Simple form from the verb: drink</p>", "answers": ["drank", "drunk"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T18:22:46Z", "section": "", "question_plain": "Past Simple form from the verb: drink", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795408, "assessment_type": "multiple-choice", "created": "2016-01-06T18:23:16Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Simple form from the verb: fall</p>", "answers": ["fell", "felt"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T18:23:16Z", "section": "", "question_plain": "Past Simple form from the verb: fall", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795410, "assessment_type": "multiple-choice", "created": "2016-01-06T18:23:45Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Simple form from the verb: forget</p>", "answers": ["forgot", "forgit"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T18:23:45Z", "section": "", "question_plain": "Past Simple form from the verb: forget", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795412, "assessment_type": "multiple-choice", "created": "2016-01-06T18:24:12Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Simple form from the verb: hide</p>", "answers": ["hidden", "hid"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:24:12Z", "section": "", "question_plain": "Past Simple form from the verb: hide", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795416, "assessment_type": "multiple-choice", "created": "2016-01-06T18:24:36Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Simple form from the verb: know</p>", "answers": ["known", "knew"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:24:36Z", "section": "", "question_plain": "Past Simple form from the verb: know", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795420, "assessment_type": "multiple-choice", "created": "2016-01-06T18:25:41Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Simple form from the verb: say</p>", "answers": ["soid", "said"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:25:41Z", "section": "", "question_plain": "Past Simple form from the verb: say", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795422, "assessment_type": "multiple-choice", "created": "2016-01-06T18:26:13Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Simple form from the verb: think</p>", "answers": ["thought", "thougth"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T18:26:13Z", "section": "", "question_plain": "Past Simple form from the verb: think", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795424, "assessment_type": "multiple-choice", "created": "2016-01-06T18:26:56Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Participle form from the verb: be</p>", "answers": ["was", "been"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:26:56Z", "section": "", "question_plain": "Past Participle form from the verb: be", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795428, "assessment_type": "multiple-choice", "created": "2016-01-06T18:27:33Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Participle form from the verb:sell</p>", "answers": ["solen", "sold"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:27:33Z", "section": "", "question_plain": "Past Participle form from the verb:sell", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795430, "assessment_type": "multiple-choice", "created": "2016-01-06T18:27:55Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Past Participle form from the verb: spend</p>", "answers": ["spend", "spent"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:27:55Z", "section": "", "question_plain": "Past Participle form from the verb: spend", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

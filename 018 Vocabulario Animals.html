@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>018 Vocabulario Animals</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795366, "assessment_type": "multiple-choice", "created": "2016-01-06T18:01:08Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["pulpo", "gatito", "loro"], "question": "<p>kitten</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:01:08Z", "section": "", "question_plain": "kitten", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795368, "assessment_type": "multiple-choice", "created": "2016-01-06T18:01:42Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["pelo", "ala", "mascota"], "question": "<p>fur</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T18:01:42Z", "section": "", "question_plain": "fur", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795370, "assessment_type": "multiple-choice", "created": "2016-01-06T18:02:10Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["cisne", "perrito", "pelo"], "question": "<p>puppy</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:02:10Z", "section": "", "question_plain": "puppy", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795372, "assessment_type": "multiple-choice", "created": "2016-01-06T18:03:01Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["pulpo", "camello", "tiburon"], "question": "<p>shark</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T18:03:01Z", "section": "", "question_plain": "shark", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795374, "assessment_type": "multiple-choice", "created": "2016-01-06T18:03:33Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["cage", "bat", "bear"], "question": "<p>murcielago</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:03:33Z", "section": "", "question_plain": "murcielago", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795376, "assessment_type": "multiple-choice", "created": "2016-01-06T18:04:18Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["mariposa", "jaula", "pelo"], "question": "<p>cage</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:04:18Z", "section": "", "question_plain": "cage", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

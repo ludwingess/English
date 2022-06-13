@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>007 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 797958, "assessment_type": "multiple-choice", "created": "2016-01-08T17:09:42Z", "prompt": {"question": "<p>Are you tired?</p>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Estas tu cansado?", "Estas tu enfadado?"]}, "correct_response": ["a"], "updated": "2016-01-08T17:09:42Z", "section": "", "question_plain": "Are you tired?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797960, "assessment_type": "multiple-choice", "created": "2016-01-08T17:11:06Z", "prompt": {"question": "<p>My best friend is tall</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Mi mejor amigo es listo", "Mi mejor amigo es alto", "Mi mejor amigo es delgado"]}, "correct_response": ["b"], "updated": "2016-01-08T17:11:06Z", "section": "", "question_plain": "My best friend is tall", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797962, "assessment_type": "multiple-choice", "created": "2016-01-08T17:11:58Z", "prompt": {"question": "<p>The market is famous for its food</p>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["El mercado es famoso por su comida", "El mercado es famoso para comer"]}, "correct_response": ["a"], "updated": "2016-01-08T17:11:58Z", "section": "", "question_plain": "The market is famous for its food", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797964, "assessment_type": "multiple-choice", "created": "2016-01-08T17:12:38Z", "prompt": {"question": "<p>I am not listening to him</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Yo no la estoy escuchando", "Yo no lo estoy escuchando", "Yo no lo escucho"]}, "correct_response": ["b"], "updated": "2016-01-08T17:12:38Z", "section": "", "question_plain": "I am not listening to him", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797966, "assessment_type": "multiple-choice", "created": "2016-01-08T17:13:49Z", "prompt": {"question": "<p>Why are you sad?</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Porque estas enfadado?", "Porque estas triste?", "Porque estas sucio?"]}, "correct_response": ["b"], "updated": "2016-01-08T17:13:49Z", "section": "", "question_plain": "Why are you sad?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 797970, "assessment_type": "multiple-choice", "created": "2016-01-08T17:14:43Z", "prompt": {"question": "<p>This is an easy exercise</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Estos son unos ejercicios faciles", "Este es un ejercicio facil", "Ese es un ejercicio facil"]}, "correct_response": ["b"], "updated": "2016-01-08T17:14:43Z", "section": "", "question_plain": "This is an easy exercise", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>020 Grammar Two verbs together</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 803828, "assessment_type": "multiple-choice", "created": "2016-01-13T12:34:22Z", "prompt": {"feedbacks": ["", ""], "question": "<p>hope</p>", "answers": ["Gerund", "Infinitive"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:34:22Z", "section": "", "question_plain": "hope", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803830, "assessment_type": "multiple-choice", "created": "2016-01-13T12:34:47Z", "prompt": {"answers": ["Gerund", "Infinitive"], "question": "<p>wait</p>", "feedbacks": ["", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:34:47Z", "section": "", "question_plain": "wait", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803832, "assessment_type": "multiple-choice", "created": "2016-01-13T12:35:08Z", "prompt": {"answers": ["Gerund", "Infinitive"], "relatedLectureIds": "", "question": "<p>seem</p>", "feedbacks": ["", ""]}, "correct_response": ["b"], "updated": "2016-01-13T12:35:08Z", "section": "", "question_plain": "seem", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803834, "assessment_type": "multiple-choice", "created": "2016-01-13T12:35:32Z", "prompt": {"feedbacks": ["", ""], "question": "<p>decide</p>", "answers": ["Gerund", "Infinitive"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:35:32Z", "section": "", "question_plain": "decide", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803836, "assessment_type": "multiple-choice", "created": "2016-01-13T12:35:55Z", "prompt": {"answers": ["Gerund", "Infinitive"], "relatedLectureIds": "", "question": "<p>understand</p>", "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T12:35:55Z", "section": "", "question_plain": "understand", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803838, "assessment_type": "multiple-choice", "created": "2016-01-13T12:36:23Z", "prompt": {"answers": ["Gerund", "Infinitive"], "relatedLectureIds": "", "question": "<p>know</p>", "feedbacks": ["", ""]}, "correct_response": ["b"], "updated": "2016-01-13T12:36:23Z", "section": "", "question_plain": "know", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803840, "assessment_type": "multiple-choice", "created": "2016-01-13T12:38:09Z", "prompt": {"relatedLectureIds": "", "question": "<p>forget</p>", "answers": ["Gerund or Infinitive", "Gerund", "Infinitive"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-13T12:38:09Z", "section": "", "question_plain": "forget", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803842, "assessment_type": "multiple-choice", "created": "2016-01-13T12:38:46Z", "prompt": {"answers": ["Gerund", "Infinitive", "Gerund or Infinitive"], "relatedLectureIds": "", "question": "<p>begin</p>", "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2016-01-13T12:38:46Z", "section": "", "question_plain": "begin", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803846, "assessment_type": "multiple-choice", "created": "2016-01-13T12:39:24Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>agree</p>", "answers": ["Gerund", "Infinitive", "Gerund or Infinitive"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:39:24Z", "section": "", "question_plain": "agree", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803848, "assessment_type": "multiple-choice", "created": "2016-01-13T12:39:49Z", "prompt": {"relatedLectureIds": "", "question": "<p>promise</p>", "answers": ["Gerund or Infinitive", "Gerund", "Infinitive"], "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2016-01-13T12:39:49Z", "section": "", "question_plain": "promise", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

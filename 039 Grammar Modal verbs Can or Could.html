@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>039 Grammar Modal verbs Can or Could</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 815242, "assessment_type": "multiple-choice", "created": "2016-01-20T18:33:02Z", "prompt": {"feedbacks": ["", ""], "question": "<p>When I was 15 I _______ jump higher than now.</p>", "relatedLectureIds": "", "answers": ["can", "could"]}, "correct_response": ["b"], "updated": "2016-01-20T18:33:02Z", "section": "", "question_plain": "When I was 15 I _______ jump higher than now.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815246, "assessment_type": "multiple-choice", "created": "2016-01-20T18:33:27Z", "prompt": {"feedbacks": ["", "", "", ""], "relatedLectureIds": "", "question": "<p>When I was a kid I ______ run for 1 hour, but now I can.</p>", "answers": ["can", "can\u00b4t", "could", "couldn\u00b4t"]}, "correct_response": ["d"], "updated": "2016-01-20T18:33:27Z", "section": "", "question_plain": "When I was a kid I ______ run for 1 hour, but now I can.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815248, "assessment_type": "multiple-choice", "created": "2016-01-20T18:34:12Z", "prompt": {"feedbacks": ["", "", "", ""], "relatedLectureIds": "", "answers": ["could \n", "couldn\u00b4t \n", "can\u00b4t \n", "can"], "question": "<p>I don\u00b4t work this week, I _____ sleep until late.</p>"}, "correct_response": ["d"], "updated": "2016-01-20T18:34:12Z", "section": "", "question_plain": "I don\u00b4t work this week, I _____ sleep until late.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815250, "assessment_type": "multiple-choice", "created": "2016-01-20T18:34:53Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Can", "Do you can"], "question": "<p>_____ you play guitar?</p>"}, "correct_response": ["a"], "updated": "2016-01-20T18:34:53Z", "section": "", "question_plain": "_____ you play guitar?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815252, "assessment_type": "multiple-choice", "created": "2016-01-20T18:35:12Z", "prompt": {"feedbacks": ["", ""], "question": "<p>When I was a baby, I ______ read.</p>", "relatedLectureIds": "", "answers": ["can", "could"]}, "correct_response": ["b"], "updated": "2016-01-20T18:35:12Z", "section": "", "question_plain": "When I was a baby, I ______ read.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815254, "assessment_type": "multiple-choice", "created": "2016-01-20T18:35:42Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "question": "<p>My older brother ______ run very fast.</p>", "answers": ["can", "doesn\u00b4t can"]}, "correct_response": ["a"], "updated": "2016-01-20T18:35:42Z", "section": "", "question_plain": "My older brother ______ run very fast.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815258, "assessment_type": "multiple-choice", "created": "2016-01-20T18:37:12Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>I _____ go to work yesterday, but today I can\u00b4t.</p>", "relatedLectureIds": "", "answers": ["could", "can", "can\u00b4t", "couldn\u00b4t"]}, "correct_response": ["a"], "updated": "2016-01-20T18:37:12Z", "section": "", "question_plain": "I _____ go to work yesterday, but today I can\u00b4t.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815262, "assessment_type": "multiple-choice", "created": "2016-01-20T18:37:53Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "question": "<p>_____ you ride a bike when you were 4 years old?</p>", "answers": ["can", "can\u00b4t", "could"]}, "correct_response": ["c"], "updated": "2016-01-20T18:37:53Z", "section": "", "question_plain": "_____ you ride a bike when you were 4 years old?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815264, "assessment_type": "multiple-choice", "created": "2016-01-20T18:38:47Z", "prompt": {"feedbacks": ["", "", "", ""], "relatedLectureIds": "", "answers": ["can", "can\u00b4t", "could", "couldn\u00b4t"], "question": "<p>She broke my glasses yesterday, so I ____ see now!</p>"}, "correct_response": ["b"], "updated": "2016-01-20T18:38:47Z", "section": "", "question_plain": "She broke my glasses yesterday, so I ____ see now!", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 815266, "assessment_type": "multiple-choice", "created": "2016-01-20T18:39:14Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", "", ""], "question": "<p>I was in a meeting, I ______ answer the phone.</p>", "answers": ["can", "can\u00b4t", "could", "couldn\u00b4t"]}, "correct_response": ["d"], "updated": "2016-01-20T18:39:14Z", "section": "", "question_plain": "I was in a meeting, I ______ answer the phone.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

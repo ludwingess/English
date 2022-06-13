@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>031 Grammar There was  were 2</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 804062, "assessment_type": "multiple-choice", "created": "2016-01-13T15:37:03Z", "prompt": {"question": "<p>There _____ a lot of questions in the exam.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "were", "wasn\u00b4t", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:37:03Z", "section": "", "question_plain": "There _____ a lot of questions in the exam.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804064, "assessment_type": "multiple-choice", "created": "2016-01-13T15:37:26Z", "prompt": {"question": "<p>There _____ nothing to say to the teacher.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "were", "wasn\u00b4t", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T15:37:26Z", "section": "", "question_plain": "There _____ nothing to say to the teacher.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804170, "assessment_type": "multiple-choice", "created": "2016-01-13T18:07:02Z", "prompt": {"question": "<p>There _____ any nice houses in the area.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "wasn\u00b4t", "were", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["d"], "updated": "2016-01-13T18:07:02Z", "section": "", "question_plain": "There _____ any nice houses in the area.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804172, "assessment_type": "multiple-choice", "created": "2016-01-13T18:07:26Z", "prompt": {"question": "<p>There _____ some cheese in the sandwich.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "wasn\u00b4t", "were", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T18:07:26Z", "section": "", "question_plain": "There _____ some cheese in the sandwich.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804174, "assessment_type": "multiple-choice", "created": "2016-01-13T18:07:53Z", "prompt": {"question": "<p>There _____ no big box where you told me.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "wasn\u00b4t", "were", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T18:07:53Z", "section": "", "question_plain": "There _____ no big box where you told me.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804178, "assessment_type": "multiple-choice", "created": "2016-01-13T18:08:14Z", "prompt": {"question": "<p>\u00bf _____ there any furniture in the house?</p>", "feedbacks": ["", ""], "answers": ["was", "were"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T18:08:14Z", "section": "", "question_plain": "\u00bf _____ there any furniture in the house?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804182, "assessment_type": "multiple-choice", "created": "2016-01-13T18:08:45Z", "prompt": {"question": "<p>There _____ something I wanted to tell you.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "wasn\u00b4t", "were", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T18:08:45Z", "section": "", "question_plain": "There _____ something I wanted to tell you.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804184, "assessment_type": "multiple-choice", "created": "2016-01-13T18:09:13Z", "prompt": {"question": "<p>There _____ any butter in the fridge.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "wasn\u00b4t", "were", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T18:09:13Z", "section": "", "question_plain": "There _____ any butter in the fridge.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804188, "assessment_type": "multiple-choice", "created": "2016-01-13T18:09:40Z", "prompt": {"question": "<p>My bag was empty. There _____ nothing inside.</p>", "feedbacks": ["", "", "", ""], "answers": ["was", "were", "wasn\u00b4t", "weren\u00b4t"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T18:09:40Z", "section": "", "question_plain": "My bag was empty. There _____ nothing inside.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804190, "assessment_type": "multiple-choice", "created": "2016-01-13T18:09:58Z", "prompt": {"question": "<p>There _____ a long waiting list.</p>", "feedbacks": ["", ""], "answers": ["was", "were"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T18:09:58Z", "section": "", "question_plain": "There _____ a long waiting list.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

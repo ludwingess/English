@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>070 Reading comprehension quiz</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 9, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796768, "assessment_type": "multiple-choice", "created": "2016-01-07T18:45:59Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["Because he is tired.", "Because he has work.", "Because he has things to do.", "Because he had an accident."], "question": "<p>Why\nis Ben late?</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:45:59Z", "section": "", "question_plain": "Why\nis Ben late?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796770, "assessment_type": "multiple-choice", "created": "2016-01-07T18:46:35Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["He will get a pay cut.", "He will need to buy a watch.", "He will have to find a new job.", "He will need to adjust his car."], "question": "<p>What\ndoes Ben think will happen if he is late to work again?</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:46:35Z", "section": "", "question_plain": "What\ndoes Ben think will happen if he is late to work again?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796774, "assessment_type": "multiple-choice", "created": "2016-01-07T18:47:15Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["8:30", "8:10", "8:20", "8:40"], "question": "<p>What\ntime does Ben need to be at work?</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T18:47:15Z", "section": "", "question_plain": "What\ntime does Ben need to be at work?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796780, "assessment_type": "multiple-choice", "created": "2016-01-07T18:48:29Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["Ben shouting", "Police sirens sounding", "Ben driving off the road", "Ben hitting someone\u2019s car"], "question": "<p>What\nis the loud noise?</p>", "relatedLectureIds": ""}, "correct_response": ["d"], "updated": "2016-01-07T18:48:29Z", "section": "", "question_plain": "What\nis the loud noise?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796782, "assessment_type": "multiple-choice", "created": "2016-01-07T18:49:04Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["He looks if anybody saw the accident.", "He drives back home.", "He looks after the other car.", "He laughs."], "question": "<p>What\ndoes Ben do when he hits the other car?</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T18:49:04Z", "section": "", "question_plain": "What\ndoes Ben do when he hits the other car?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796786, "assessment_type": "multiple-choice", "created": "2016-01-07T18:49:53Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["Nothing, because his boss is not around.", "Nothing, because he gets to work on time.", "Nothing, because his boss is sitting at his desk.", "His boss says \u201cThanks goodness\u201d to him."], "question": "<p>What\ndoes his boss say when Ben gets to work?</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T18:49:53Z", "section": "", "question_plain": "What\ndoes his boss say when Ben gets to work?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796790, "assessment_type": "multiple-choice", "created": "2016-01-07T18:50:25Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["his boss", "his wife", "the driver of the other car", "his boss\u00b4wife"], "question": "<p>Who\ndoes Ben talk to during the story?</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T18:50:25Z", "section": "", "question_plain": "Who\ndoes Ben talk to during the story?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796794, "assessment_type": "multiple-choice", "created": "2016-01-07T18:50:56Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["He needed help.", "He wanted a go to work", "He needed to check where he was.", "He wanted to see if anyone saw him."], "question": "<p>Why\ndid Ben look around after he hit the car?</p>", "relatedLectureIds": ""}, "correct_response": ["d"], "updated": "2016-01-07T18:50:56Z", "section": "", "question_plain": "Why\ndid Ben look around after he hit the car?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796798, "assessment_type": "multiple-choice", "created": "2016-01-07T18:51:30Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["Ben", "His boss", "His wife", "Someone he doesn\u00b4t know"], "question": "<p>Who\nwas the owner of the other car?</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:51:30Z", "section": "", "question_plain": "Who\nwas the owner of the other car?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

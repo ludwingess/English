@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>066 Grammar Present Perfect tense 2</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 805796, "assessment_type": "multiple-choice", "created": "2016-01-14T10:40:35Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["have bought", "has bougth", "have bougth"], "question": "<p>My parents ______(buy) this present for me.</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-14T10:40:35Z", "section": "", "question_plain": "My parents ______(buy) this present for me.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805798, "assessment_type": "multiple-choice", "created": "2016-01-14T10:41:02Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["read", "have read", "have readed"], "question": "<p>I _____ (read) this book twice.</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-14T10:41:02Z", "section": "", "question_plain": "I _____ (read) this book twice.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805800, "assessment_type": "multiple-choice", "created": "2016-01-14T10:41:40Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["have playied", "have played", "played"], "question": "<p>You _____ (play) with your sister a lot today.</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-14T10:41:40Z", "section": "", "question_plain": "You _____ (play) with your sister a lot today.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805802, "assessment_type": "multiple-choice", "created": "2016-01-14T10:42:24Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["you have finished", "you have finish", "have you finished"], "question": "<p>______ (you / finish) your classes today?</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-14T10:42:24Z", "section": "", "question_plain": "______ (you / finish) your classes today?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805804, "assessment_type": "multiple-choice", "created": "2016-01-14T10:43:09Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["haven\u00b4t watched", "haven\u00b4t watch", "hasn\u00b4t watched"], "question": "<p>They _____ (not watch) this film.</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-14T10:43:09Z", "section": "", "question_plain": "They _____ (not watch) this film.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805806, "assessment_type": "multiple-choice", "created": "2016-01-14T10:44:17Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["Have ever you", "Have you ever", "Have you ever had"], "question": "<p>______ (you / ever / have) an accident ?</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-14T10:44:17Z", "section": "", "question_plain": "______ (you / ever / have) an accident ?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805808, "assessment_type": "multiple-choice", "created": "2016-01-14T10:47:02Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["never had", "have never had", "never have had"], "question": "<p>No, I _____(never / have) an accident.</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-03-03T11:52:01Z", "section": "", "question_plain": "No, I _____(never / have) an accident.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805810, "assessment_type": "multiple-choice", "created": "2016-01-14T10:47:50Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["Have you ever been", "You have ever been", "Have you ever were"], "question": "<p>_____ (you / ever / be) to Greece ?</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-14T10:47:50Z", "section": "", "question_plain": "_____ (you / ever / be) to Greece ?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805812, "assessment_type": "multiple-choice", "created": "2016-01-14T10:48:24Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["have been", "been", "was"], "question": "<p>Yes, I _____(be)  to Greece .</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-03-03T11:54:23Z", "section": "", "question_plain": "Yes, I _____(be)  to Greece .", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805814, "assessment_type": "multiple-choice", "created": "2016-01-14T10:49:13Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["You have seen", "You have saw", "Have you seen", "Have you saw"], "question": "<p>_____ (you / see) Sarah today ?</p><ul></ul>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-14T10:49:13Z", "section": "", "question_plain": "_____ (you / see) Sarah today ?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

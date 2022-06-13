@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>054 Vocabulario At home</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795542, "assessment_type": "multiple-choice", "created": "2016-01-06T19:20:28Z", "prompt": {"question": "<p>basement</p>", "feedbacks": ["", "", ""], "answers": ["sotano", "ascensor", "escaleras"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:20:28Z", "section": "", "question_plain": "basement", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795544, "assessment_type": "multiple-choice", "created": "2016-01-06T19:20:58Z", "prompt": {"question": "<p>blanket</p>", "feedbacks": ["", "", ""], "answers": ["llave", "manta", "toalla"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:20:58Z", "section": "", "question_plain": "blanket", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795546, "assessment_type": "multiple-choice", "created": "2016-01-06T19:21:25Z", "prompt": {"question": "<p>llave</p>", "feedbacks": ["", "", ""], "answers": ["shelf", "key", "lift"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:21:25Z", "section": "", "question_plain": "llave", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795548, "assessment_type": "multiple-choice", "created": "2016-01-06T19:22:09Z", "prompt": {"question": "<p>fan</p>", "feedbacks": ["", "", ""], "answers": ["jabon", "ventilador", "sello"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:22:09Z", "section": "", "question_plain": "fan", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795550, "assessment_type": "multiple-choice", "created": "2016-01-06T19:22:54Z", "prompt": {"question": "<p>dairy</p>", "feedbacks": ["", "", ""], "answers": ["nevera", "lacteos", "jabon"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:22:54Z", "section": "", "question_plain": "dairy", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795552, "assessment_type": "multiple-choice", "created": "2016-01-06T19:23:23Z", "prompt": {"question": "<p>toothbrush</p>", "feedbacks": ["", "", ""], "answers": ["cepillo de dientes", "ducha", "balcon"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:23:23Z", "section": "", "question_plain": "toothbrush", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795554, "assessment_type": "multiple-choice", "created": "2016-01-06T19:23:56Z", "prompt": {"question": "<p>nevera</p>", "feedbacks": ["", "", ""], "answers": ["shelf", "blanket", "fridge"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T19:23:56Z", "section": "", "question_plain": "nevera", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795558, "assessment_type": "multiple-choice", "created": "2016-01-06T19:24:23Z", "prompt": {"question": "<p>shelf</p>", "feedbacks": ["", "", ""], "answers": ["estanteria", "ascensor", "sotano"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:24:23Z", "section": "", "question_plain": "shelf", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

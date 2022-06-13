@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>002 Vocabulario Verbos Movers</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795302, "assessment_type": "multiple-choice", "created": "2016-01-06T17:36:16Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>bring</p>", "answers": ["dejar caer", "traer", "ayudar"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T17:36:16Z", "section": "", "question_plain": "bring", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795304, "assessment_type": "multiple-choice", "created": "2016-01-06T17:36:48Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>cook</p>", "answers": ["escalar", "llorar", "cocinar"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T17:36:48Z", "section": "", "question_plain": "cook", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795306, "assessment_type": "multiple-choice", "created": "2016-01-06T17:37:37Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>drop</p>", "answers": ["dejar caer", "so\u00f1ar", "desvestirse"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T17:37:37Z", "section": "", "question_plain": "drop", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795308, "assessment_type": "multiple-choice", "created": "2016-01-06T17:38:13Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>hide</p>", "answers": ["esconder", "reir", "levantarse"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T17:38:13Z", "section": "", "question_plain": "hide", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795310, "assessment_type": "multiple-choice", "created": "2016-01-06T17:38:42Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>laugh</p>", "answers": ["buscar", "reir", "perder"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T17:38:42Z", "section": "", "question_plain": "laugh", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795312, "assessment_type": "multiple-choice", "created": "2016-01-06T17:39:11Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>look for</p>", "answers": ["necesitar", "recordar", "buscar"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T17:39:11Z", "section": "", "question_plain": "look for", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795314, "assessment_type": "multiple-choice", "created": "2016-01-06T17:39:45Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>take off</p>", "answers": ["sacar", "esperar", "pensar"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T17:39:45Z", "section": "", "question_plain": "take off", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795316, "assessment_type": "multiple-choice", "created": "2016-01-06T17:40:24Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>wake up</p>", "answers": ["despertarse", "ponerse", "significar"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T17:40:24Z", "section": "", "question_plain": "wake up", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795318, "assessment_type": "multiple-choice", "created": "2016-01-06T17:40:59Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>shout</p>", "answers": ["habia", "chillar", "significar"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T17:40:59Z", "section": "", "question_plain": "shout", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795320, "assessment_type": "multiple-choice", "created": "2016-01-06T17:41:39Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>recordar</p>", "answers": ["skip", "remember", "think"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T17:41:39Z", "section": "", "question_plain": "recordar", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

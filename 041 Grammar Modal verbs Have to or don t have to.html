@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>041 Grammar Modal verbs Have to or don t have to</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 804272, "assessment_type": "multiple-choice", "created": "2016-01-13T19:42:22Z", "prompt": {"feedbacks": ["", ""], "question": "<p>There are no taxis. We _______ walk home.</p>", "relatedLectureIds": "", "answers": ["have to", "don\u00b4t have to"]}, "correct_response": ["a"], "updated": "2016-01-13T19:42:22Z", "section": "", "question_plain": "There are no taxis. We _______ walk home.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804274, "assessment_type": "multiple-choice", "created": "2016-01-13T19:42:51Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "question": "<p>My grandmother ______ take her medicine everyday.</p>", "answers": ["has to", "have to", "doesn\u00b4t have to"]}, "correct_response": ["a"], "updated": "2016-01-13T19:42:51Z", "section": "", "question_plain": "My grandmother ______ take her medicine everyday.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804276, "assessment_type": "multiple-choice", "created": "2016-01-13T19:43:12Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "question": "<p>My fridge is empty. I ______ buy some food.</p>", "answers": ["have to", "don\u00b4t have to"]}, "correct_response": ["a"], "updated": "2016-01-13T19:43:12Z", "section": "", "question_plain": "My fridge is empty. I ______ buy some food.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804278, "assessment_type": "multiple-choice", "created": "2016-01-13T19:43:53Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>He doesn\u00b4t work on Sundays. He _______ wake up early on Sundays.</p>", "relatedLectureIds": "", "answers": ["has to", "doesn\u00b4t have to", "doesn\u00b4t has to"]}, "correct_response": ["b"], "updated": "2016-01-13T19:43:53Z", "section": "", "question_plain": "He doesn\u00b4t work on Sundays. He _______ wake up early on Sundays.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804280, "assessment_type": "multiple-choice", "created": "2016-01-13T19:44:12Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "question": "<p>You ______ study a lot to become a lawyer.</p>", "answers": ["have to", "don\u00b4t have to"]}, "correct_response": ["a"], "updated": "2016-01-13T19:44:12Z", "section": "", "question_plain": "You ______ study a lot to become a lawyer.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804282, "assessment_type": "multiple-choice", "created": "2016-01-13T19:44:30Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", ""], "question": "<p>My car broke down. I ______ buy a new car.</p>", "answers": ["have to", "don\u00b4t have to"]}, "correct_response": ["a"], "updated": "2016-01-13T19:44:30Z", "section": "", "question_plain": "My car broke down. I ______ buy a new car.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804284, "assessment_type": "multiple-choice", "created": "2016-01-13T19:44:49Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["has to", "doesn\u00b4t have to"], "question": "<p>She ______ go to the doctor. She feels well.</p>"}, "correct_response": ["b"], "updated": "2016-01-13T19:44:49Z", "section": "", "question_plain": "She ______ go to the doctor. She feels well.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804286, "assessment_type": "multiple-choice", "created": "2016-01-13T19:45:11Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["have to", "don\u00b4t have to"], "question": "<p>I am on vacation. I ______ wake up early.</p>"}, "correct_response": ["b"], "updated": "2016-01-13T19:45:11Z", "section": "", "question_plain": "I am on vacation. I ______ wake up early.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804290, "assessment_type": "multiple-choice", "created": "2016-01-13T19:45:35Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", ""], "question": "<p>The doctor said that I ______ rest more to get better.</p>", "answers": ["have to", "don\u00b4t have to"]}, "correct_response": ["a"], "updated": "2016-01-13T19:45:35Z", "section": "", "question_plain": "The doctor said that I ______ rest more to get better.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804292, "assessment_type": "multiple-choice", "created": "2016-01-13T19:45:55Z", "prompt": {"feedbacks": ["", ""], "question": "<p>It\u00b4s late. I _______ go home now!</p>", "relatedLectureIds": "", "answers": ["have to", "don\u00b4t have to"]}, "correct_response": ["a"], "updated": "2016-01-13T19:45:55Z", "section": "", "question_plain": "It\u00b4s late. I _______ go home now!", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

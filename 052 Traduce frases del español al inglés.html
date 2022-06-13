@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>052 Traduce frases del español al inglés</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 800702, "assessment_type": "multiple-choice", "created": "2016-01-11T11:41:11Z", "prompt": {"relatedLectureIds": "", "question": "<p>Llevaba Tom una bufanda?</p>", "answers": ["Was Tom wearing a scarf?", "Tom was wearing a skirt?", "Was Tom guessing a skirt?", "Were Tom wearing a scarf?"], "feedbacks": ["", "", "", ""]}, "correct_response": ["a"], "updated": "2016-01-11T11:41:11Z", "section": "", "question_plain": "Llevaba Tom una bufanda?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800708, "assessment_type": "multiple-choice", "created": "2016-01-11T11:42:42Z", "prompt": {"relatedLectureIds": "", "question": "<p>Yo estaba disfrutando de la pel\u00edcula</p>", "answers": ["I was enjoy the movie", "I was enjoying the movie", "I was liking the movie", "I was enjoing the movie"], "feedbacks": ["", "", "", ""]}, "correct_response": ["b"], "updated": "2016-01-11T11:42:42Z", "section": "", "question_plain": "Yo estaba disfrutando de la pel\u00edcula", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800710, "assessment_type": "multiple-choice", "created": "2016-01-11T11:44:06Z", "prompt": {"relatedLectureIds": "", "answers": ["The movie was begining", "The movie was beginning", "The movie was begin"], "question": "<p>La pelicula estaba empezando</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-11T11:44:06Z", "section": "", "question_plain": "La pelicula estaba empezando", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800712, "assessment_type": "multiple-choice", "created": "2016-01-11T11:45:12Z", "prompt": {"relatedLectureIds": "", "answers": ["He wasn\u00b4t driving high", "He wasn\u00b4t driving fast", "He wasn\u00b4t driving full", "He wasn\u00b4t driving sure"], "question": "<p>El no estaba conduciendo rapido</p>", "feedbacks": ["", "", "", ""]}, "correct_response": ["b"], "updated": "2016-01-11T11:45:12Z", "section": "", "question_plain": "El no estaba conduciendo rapido", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800714, "assessment_type": "multiple-choice", "created": "2016-01-11T11:45:46Z", "prompt": {"relatedLectureIds": "", "answers": ["I was making a bake", "I was doing a cake", "I was making a cake"], "question": "<p>Yo estaba haciendo un pastel</p>", "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2016-01-11T11:45:46Z", "section": "", "question_plain": "Yo estaba haciendo un pastel", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800716, "assessment_type": "multiple-choice", "created": "2016-01-11T11:46:31Z", "prompt": {"relatedLectureIds": "", "question": "<p>El no estaba moviendo la mesa</p>", "answers": ["He wasn\u00b4t moving the table", "She wasn\u00b4t moving the table", "He didn\u00b4t move the table"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-11T11:46:31Z", "section": "", "question_plain": "El no estaba moviendo la mesa", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800718, "assessment_type": "multiple-choice", "created": "2016-01-11T11:47:18Z", "prompt": {"relatedLectureIds": "", "question": "<p>Yo no estaba usando mi antigua tele</p>", "answers": ["I didn\u00b4t use my old TV", "I wasn\u00b4t using my antique TV", "I wasn\u00b4t using my old TV"], "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2016-01-11T11:47:18Z", "section": "", "question_plain": "Yo no estaba usando mi antigua tele", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800720, "assessment_type": "multiple-choice", "created": "2016-01-11T11:48:28Z", "prompt": {"relatedLectureIds": "", "answers": ["Anything was happening there.", "Something happened there.", "Something was happening there.", "Everything was happening there.", "Something was happening here."], "question": "<p>Algo estaba pasando alli</p>", "feedbacks": ["", "", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-11T11:48:28Z", "section": "", "question_plain": "Algo estaba pasando alli", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

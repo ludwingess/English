@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>072 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 5, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 800764, "assessment_type": "multiple-choice", "created": "2016-01-11T12:04:26Z", "prompt": {"relatedLectureIds": "", "question": "<p>I have lost my keys</p>", "feedbacks": ["", ""], "answers": ["He perdido mis llaves", "He olvidado mis llaves"]}, "correct_response": ["a"], "updated": "2016-01-11T12:04:26Z", "section": "", "question_plain": "I have lost my keys", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800788, "assessment_type": "multiple-choice", "created": "2016-01-11T12:08:12Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>I haven\u00b4t bought anything yet</p>", "answers": ["Aun no he comprado nada", "Ya he comprado algo", "No he comprado nada raro"]}, "correct_response": ["a"], "updated": "2016-01-11T12:08:12Z", "section": "", "question_plain": "I haven\u00b4t bought anything yet", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800796, "assessment_type": "multiple-choice", "created": "2016-01-11T12:09:08Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>I have been to many countries</p>", "answers": ["Fu\u00ed a bastantes paises", "He estado en muchos paises", "He estado en la mayor\u00eda de paises"]}, "correct_response": ["b"], "updated": "2016-01-11T12:09:08Z", "section": "", "question_plain": "I have been to many countries", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800804, "assessment_type": "multiple-choice", "created": "2016-01-11T12:10:18Z", "prompt": {"relatedLectureIds": "", "question": "<p>I have just arrived home</p>", "feedbacks": ["", "", ""], "answers": ["Acabo de llegar a casa", "A\u00fan estoy llegando a casa", "Ya he llegado a casa"]}, "correct_response": ["a"], "updated": "2016-01-11T12:10:18Z", "section": "", "question_plain": "I have just arrived home", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800810, "assessment_type": "multiple-choice", "created": "2016-01-11T12:11:15Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>They have already arrived</p>", "answers": ["Acaban de llegar", "Ellos ya han llegado", "Han llegado pronto"]}, "correct_response": ["b"], "updated": "2016-01-11T12:11:15Z", "section": "", "question_plain": "They have already arrived", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

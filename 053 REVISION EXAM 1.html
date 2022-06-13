@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>053 REVISION EXAM 1</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 805926, "assessment_type": "multiple-choice", "created": "2016-01-14T12:23:49Z", "prompt": {"question": "<p>I am making an exercise.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["incorrect", "correct"]}, "correct_response": ["a"], "updated": "2016-01-14T12:23:49Z", "section": "", "question_plain": "I am making an exercise.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805932, "assessment_type": "multiple-choice", "created": "2016-01-14T12:25:06Z", "prompt": {"question": "<p>I always eat cereal for breakfast, but today I\u00b4m having eggs.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["correct", "incorrect"]}, "correct_response": ["a"], "updated": "2016-01-14T12:25:06Z", "section": "", "question_plain": "I always eat cereal for breakfast, but today I\u00b4m having eggs.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805938, "assessment_type": "multiple-choice", "created": "2016-01-14T12:26:34Z", "prompt": {"question": "<p>He hardly ever is at home by 9 pm.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["correct", "incorrect"]}, "correct_response": ["b"], "updated": "2016-01-14T12:26:34Z", "section": "", "question_plain": "He hardly ever is at home by 9 pm.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805940, "assessment_type": "multiple-choice", "created": "2016-01-14T12:27:10Z", "prompt": {"question": "<p>The place when we stayed, was my aunt\u00b4s home.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["correct", "incorrect"]}, "correct_response": ["b"], "updated": "2016-01-14T12:27:10Z", "section": "", "question_plain": "The place when we stayed, was my aunt\u00b4s home.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805950, "assessment_type": "multiple-choice", "created": "2016-01-14T12:29:22Z", "prompt": {"question": "<p>Please don\u00b4t smoke here!</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Correct", "Incorrect"]}, "correct_response": ["a"], "updated": "2016-01-14T12:29:22Z", "section": "", "question_plain": "Please don\u00b4t smoke here!", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805952, "assessment_type": "multiple-choice", "created": "2016-01-14T12:29:39Z", "prompt": {"question": "<p>The person who was sitting next to me was my brother.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Correct", "Incorrect"]}, "correct_response": ["a"], "updated": "2016-01-14T12:29:39Z", "section": "", "question_plain": "The person who was sitting next to me was my brother.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805954, "assessment_type": "multiple-choice", "created": "2016-01-14T12:30:00Z", "prompt": {"question": "<p>I finished to cook at 8 pm.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Correct", "Incorrect"]}, "correct_response": ["b"], "updated": "2016-01-14T12:30:00Z", "section": "", "question_plain": "I finished to cook at 8 pm.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805958, "assessment_type": "multiple-choice", "created": "2016-01-14T12:30:19Z", "prompt": {"question": "<p>Were there good music at the concert yesterday?</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Correct", "Incorrect"]}, "correct_response": ["b"], "updated": "2016-01-14T12:30:19Z", "section": "", "question_plain": "Were there good music at the concert yesterday?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805960, "assessment_type": "multiple-choice", "created": "2016-01-14T12:30:37Z", "prompt": {"question": "<p>I think you should to stop smoking.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Correct", "Incorrect"]}, "correct_response": ["b"], "updated": "2016-01-14T12:30:37Z", "section": "", "question_plain": "I think you should to stop smoking.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805962, "assessment_type": "multiple-choice", "created": "2016-01-14T12:30:58Z", "prompt": {"question": "<p>I never remember where I leaft my keys.</p><ul></ul>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Correct", "Incorrect"]}, "correct_response": ["b"], "updated": "2016-01-14T12:30:58Z", "section": "", "question_plain": "I never remember where I leaft my keys.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>055 Vocabulario Places</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795560, "assessment_type": "multiple-choice", "created": "2016-01-06T19:25:27Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>bridge</p>", "answers": ["puente", "fabrica", "comisaria"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:25:27Z", "section": "", "question_plain": "bridge", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795562, "assessment_type": "multiple-choice", "created": "2016-01-06T19:26:00Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>fabrica</p>", "answers": ["theatre", "fire station", "factory"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T19:26:00Z", "section": "", "question_plain": "fabrica", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795564, "assessment_type": "multiple-choice", "created": "2016-01-06T19:26:42Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>chemist('s)</p>", "answers": ["puente", "farmacia", "fabrica"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:26:42Z", "section": "", "question_plain": "chemist('s)", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795566, "assessment_type": "multiple-choice", "created": "2016-01-06T19:27:10Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>esquina</p>", "answers": ["corner", "college", "straight on"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:27:10Z", "section": "", "question_plain": "esquina", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795568, "assessment_type": "multiple-choice", "created": "2016-01-06T19:28:03Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>izquierda</p>", "answers": ["right", "left", "way"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:28:03Z", "section": "", "question_plain": "izquierda", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795570, "assessment_type": "multiple-choice", "created": "2016-01-06T19:28:34Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>camino</p>", "answers": ["west", "way", "front"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:28:34Z", "section": "", "question_plain": "camino", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795572, "assessment_type": "multiple-choice", "created": "2016-01-06T19:29:04Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>straight on</p>", "answers": ["recto", "camino", "oeste"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:29:04Z", "section": "", "question_plain": "straight on", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

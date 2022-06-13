@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>036 Vocabulario Clothes</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 4, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795432, "assessment_type": "multiple-choice", "created": "2016-01-06T18:29:21Z", "prompt": {"relatedLectureIds": "", "question": "<p>bolsillo</p>", "answers": ["pocket", "stripe", "umbrella"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T18:29:21Z", "section": "", "question_plain": "bolsillo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795434, "assessment_type": "multiple-choice", "created": "2016-01-06T18:29:53Z", "prompt": {"relatedLectureIds": "", "question": "<p>anillo</p>", "answers": ["tights", "ring", "belt"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T18:29:53Z", "section": "", "question_plain": "anillo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795438, "assessment_type": "multiple-choice", "created": "2016-01-06T18:30:21Z", "prompt": {"relatedLectureIds": "", "question": "<p>glove</p>", "feedbacks": ["", "", ""], "answers": ["guante", "pantalon corto", "medias"]}, "correct_response": ["a"], "updated": "2016-01-06T18:30:21Z", "section": "", "question_plain": "glove", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795440, "assessment_type": "multiple-choice", "created": "2016-01-06T18:31:13Z", "prompt": {"relatedLectureIds": "", "question": "<p>tights</p>", "answers": ["medias", "cinturon", "paraguas"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T18:31:13Z", "section": "", "question_plain": "tights", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>065 Grammar Present Perfect tense 1</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 805776, "assessment_type": "multiple-choice", "created": "2016-01-14T10:33:01Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Present", "Perfect", "Past or Perfect"], "question": "<p>seen</p>"}, "correct_response": ["b"], "updated": "2016-01-14T10:33:01Z", "section": "", "question_plain": "seen", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805778, "assessment_type": "multiple-choice", "created": "2016-01-14T10:33:36Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Past or Perfect", "Past ", "Present"], "question": "<p>met</p>"}, "correct_response": ["a"], "updated": "2016-01-14T10:33:36Z", "section": "", "question_plain": "met", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805780, "assessment_type": "multiple-choice", "created": "2016-01-14T10:34:10Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Past or Perfect", "Past", "Perfect"], "question": "<p>took</p>"}, "correct_response": ["b"], "updated": "2016-01-14T10:34:10Z", "section": "", "question_plain": "took", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805782, "assessment_type": "multiple-choice", "created": "2016-01-14T10:35:08Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Past or Perfect", "Past", "Perfect"], "question": "<p>stolen</p>"}, "correct_response": ["b"], "updated": "2016-01-14T10:35:08Z", "section": "", "question_plain": "stolen", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805784, "assessment_type": "multiple-choice", "created": "2016-01-14T10:35:44Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Perfect", "Past or Perfect", "Present"], "question": "<p>say</p>"}, "correct_response": ["c"], "updated": "2016-01-14T10:35:44Z", "section": "", "question_plain": "say", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805786, "assessment_type": "multiple-choice", "created": "2016-01-14T10:36:14Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Past or Perfect", "Past", "Perfect"], "question": "<p>thrown</p>"}, "correct_response": ["c"], "updated": "2016-01-14T10:36:14Z", "section": "", "question_plain": "thrown", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805788, "assessment_type": "multiple-choice", "created": "2016-01-14T10:36:43Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Present", "Past", "Perfect"], "question": "<p>know</p>"}, "correct_response": ["a"], "updated": "2016-01-14T10:36:43Z", "section": "", "question_plain": "know", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805790, "assessment_type": "multiple-choice", "created": "2016-01-14T10:37:22Z", "prompt": {"feedbacks": ["", "", "", ""], "relatedLectureIds": "", "answers": ["Present", "Past", "Perfect", "Past and Perfect"], "question": "<p>stood</p>"}, "correct_response": ["d"], "updated": "2016-01-14T10:37:22Z", "section": "", "question_plain": "stood", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805792, "assessment_type": "multiple-choice", "created": "2016-01-14T10:37:52Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Past and Perfect", "Past", "Perfect"], "question": "<p>left</p>"}, "correct_response": ["a"], "updated": "2016-01-14T10:37:52Z", "section": "", "question_plain": "left", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805794, "assessment_type": "multiple-choice", "created": "2016-01-14T10:38:20Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Past and Perfect", "Past", "Perfect"], "question": "<p>hidden</p>"}, "correct_response": ["c"], "updated": "2016-01-14T10:38:20Z", "section": "", "question_plain": "hidden", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

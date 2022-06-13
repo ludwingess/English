@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>003 Reading comprehension quiz</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796646, "assessment_type": "multiple-choice", "created": "2016-01-07T18:12:48Z", "prompt": {"question": "<p>Why\nis Lulu hiding?</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["She is playing a game.", "She does not want to go to the veterinary.", "She is eating her food."]}, "correct_response": ["b"], "updated": "2016-01-07T18:12:48Z", "section": "", "question_plain": "Why\nis Lulu hiding?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796648, "assessment_type": "multiple-choice", "created": "2016-01-07T18:13:27Z", "prompt": {"question": "<p>Who\nis Lulu calling to?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["Her mom", "Her sister", "Her puppy", "Her father"]}, "correct_response": ["a"], "updated": "2016-01-07T18:13:27Z", "section": "", "question_plain": "Who\nis Lulu calling to?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796650, "assessment_type": "multiple-choice", "created": "2016-01-07T18:14:02Z", "prompt": {"question": "<p>Where\ndoes Mom find Lulu?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["in the kitchen", "in the closet", "next to the bookcase", "behind the sofa"]}, "correct_response": ["d"], "updated": "2016-01-07T18:14:02Z", "section": "", "question_plain": "Where\ndoes Mom find Lulu?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796652, "assessment_type": "multiple-choice", "created": "2016-01-07T18:14:40Z", "prompt": {"question": "<p>How\ndoes Mom find Bella?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["Lulu makes a noise.", "Dad helps Mom.", "Mom sees Lulu's leg.", "Mom smells Lulu"]}, "correct_response": ["a"], "updated": "2016-01-07T18:14:40Z", "section": "", "question_plain": "How\ndoes Mom find Bella?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796656, "assessment_type": "multiple-choice", "created": "2016-01-07T18:15:34Z", "prompt": {"question": "<p>When\ndoes Lulu hide?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["when she is bored", "when she is scared", "when she is happy", "all the time"]}, "correct_response": ["b"], "updated": "2016-01-07T18:15:34Z", "section": "", "question_plain": "When\ndoes Lulu hide?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796658, "assessment_type": "multiple-choice", "created": "2016-01-07T18:16:13Z", "prompt": {"question": "<p>What\ndoes the veterinary do to her?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["Lulu gets her ears checked.", "Lulu gets a shot.", "Lulu gets her mouth checked", "D. Lulu gets her eyes checked."]}, "correct_response": ["a"], "updated": "2016-01-07T18:16:13Z", "section": "", "question_plain": "What\ndoes the veterinary do to her?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

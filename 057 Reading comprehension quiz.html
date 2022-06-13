@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>057 Reading comprehension quiz</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796752, "assessment_type": "multiple-choice", "created": "2016-01-07T18:41:34Z", "prompt": {"question": "<p>Why\nis this day important to Fred?</p>", "answers": ["Because he gets a job.", "Because he is ready", "Because he has a job interview", "Because he puts on a new suit"], "relatedLectureIds": "", "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:41:34Z", "section": "", "question_plain": "Why\nis this day important to Fred?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796754, "assessment_type": "multiple-choice", "created": "2016-01-07T18:42:10Z", "prompt": {"question": "<p>What\nis one thing Fred does to get ready?</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": "", "answers": ["He talks to his dad.", "He calls Mr. Stone.", "He eats breakfast.", "He combs his hair."]}, "correct_response": ["d"], "updated": "2016-01-07T18:42:10Z", "section": "", "question_plain": "What\nis one thing Fred does to get ready?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796756, "assessment_type": "multiple-choice", "created": "2016-01-07T18:42:44Z", "prompt": {"question": "<p>What\ntime is Fred's interview?</p>", "answers": ["10:50", "10:40", "11:00", "10:15"], "relatedLectureIds": "", "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:42:44Z", "section": "", "question_plain": "What\ntime is Fred's interview?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796758, "assessment_type": "multiple-choice", "created": "2016-01-07T18:43:16Z", "prompt": {"question": "<p>Why\nis Fred ready for the interview?</p>", "answers": ["Because he knows the company", "Because he learned how to do a job interview", "Because his friend will be there", "Because it isn\u00b4t a competition"], "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T18:43:16Z", "section": "", "question_plain": "Why\nis Fred ready for the interview?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796760, "assessment_type": "multiple-choice", "created": "2016-01-07T18:43:54Z", "prompt": {"question": "<p>What\nis the meaning of \"competition\" in the text?\n\n</p>", "answers": ["when people get ready to go out", "when people go for a job interview", "when people feel they are not good enough", "when many people are going after the same thing"], "relatedLectureIds": "", "feedbacks": ["", "", "", ""]}, "correct_response": ["d"], "updated": "2016-01-07T18:43:54Z", "section": "", "question_plain": "What\nis the meaning of \"competition\" in the text?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796762, "assessment_type": "multiple-choice", "created": "2016-01-07T18:44:25Z", "prompt": {"question": "<p>Why\nmight Fred be positive about getting this job?</p>", "answers": ["The economy is bad.", "He did well in school.", "His friend is helping him with the interview.", "He knows the company well."], "relatedLectureIds": "", "feedbacks": ["", "", "", ""]}, "correct_response": ["b"], "updated": "2016-01-07T18:44:25Z", "section": "", "question_plain": "Why\nmight Fred be positive about getting this job?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796766, "assessment_type": "multiple-choice", "created": "2016-01-07T18:44:58Z", "prompt": {"question": "<p>What\nis the conversation about when Fred\u00b4s phone rings?</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": "", "answers": ["About a job in Italy", "About the restaurant", "About the job interview.", "About a film"]}, "correct_response": ["d"], "updated": "2016-01-07T18:44:58Z", "section": "", "question_plain": "What\nis the conversation about when Fred\u00b4s phone rings?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

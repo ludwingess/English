@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>063 Vocabulario Jobs</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796180, "assessment_type": "multiple-choice", "created": "2016-01-07T11:31:26Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>clown</p>", "relatedLectureIds": "", "answers": ["ingeniero", "payaso", "propietario"]}, "correct_response": ["b"], "updated": "2016-01-07T11:31:26Z", "section": "", "question_plain": "clown", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796182, "assessment_type": "multiple-choice", "created": "2016-01-07T11:31:59Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>nurse</p>", "relatedLectureIds": "", "answers": ["dentista", "infermera", "camarero"]}, "correct_response": ["b"], "updated": "2016-01-07T11:31:59Z", "section": "", "question_plain": "nurse", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796184, "assessment_type": "multiple-choice", "created": "2016-01-07T11:32:41Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>farmer</p>", "relatedLectureIds": "", "answers": ["conductor", "cocinero", "granjero"]}, "correct_response": ["c"], "updated": "2016-01-07T11:32:41Z", "section": "", "question_plain": "farmer", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796186, "assessment_type": "multiple-choice", "created": "2016-01-07T11:33:24Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>cocinero</p>", "relatedLectureIds": "", "answers": ["Waiter / waitress", "clown", "cook"]}, "correct_response": ["c"], "updated": "2016-01-07T11:33:24Z", "section": "", "question_plain": "cocinero", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796188, "assessment_type": "multiple-choice", "created": "2016-01-07T11:33:58Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>conductor</p>", "relatedLectureIds": "", "answers": ["driver", "engineer", "journalist"]}, "correct_response": ["a"], "updated": "2016-01-07T11:33:58Z", "section": "", "question_plain": "conductor", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796190, "assessment_type": "multiple-choice", "created": "2016-01-07T11:35:39Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>propietario</p>", "relatedLectureIds": "", "answers": ["owner", "journalist", "waiter"]}, "correct_response": ["a"], "updated": "2016-01-07T11:35:39Z", "section": "", "question_plain": "propietario", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

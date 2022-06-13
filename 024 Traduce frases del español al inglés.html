@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>024 Traduce frases del español al inglés</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 798134, "assessment_type": "multiple-choice", "created": "2016-01-08T20:58:55Z", "prompt": {"relatedLectureIds": "", "question": "<p>Odio esperarte a ti</p>", "answers": ["I hate waiting for you", "I hate to wait for you", "I wish waiting for you", "I meet waiting for you"], "feedbacks": ["", "", "", ""]}, "correct_response": ["a"], "updated": "2016-01-08T20:58:55Z", "section": "", "question_plain": "Odio esperarte a ti", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798138, "assessment_type": "multiple-choice", "created": "2016-01-08T21:00:22Z", "prompt": {"relatedLectureIds": "", "question": "<p>Alguien esta chillando en el bus</p>", "answers": ["Anybody is shouting in the bus", "Somebody is shouting in the bus", "Anybody is laughing in the bus"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-08T21:00:22Z", "section": "", "question_plain": "Alguien esta chillando en el bus", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798142, "assessment_type": "multiple-choice", "created": "2016-01-08T21:01:50Z", "prompt": {"relatedLectureIds": "", "question": "<p>Un murci\u00e9lago es mas peque\u00f1o que un cisne</p>", "feedbacks": ["", "", ""], "answers": ["A bat is smaller than a swan", "A bat is smallest than a swan", "A bat is smaller than a kitten"]}, "correct_response": ["a"], "updated": "2016-01-08T21:01:50Z", "section": "", "question_plain": "Un murci\u00e9lago es mas peque\u00f1o que un cisne", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798146, "assessment_type": "multiple-choice", "created": "2016-01-08T21:03:10Z", "prompt": {"relatedLectureIds": "", "question": "<p>Cuida de tu hermana peque\u00f1a</p>", "feedbacks": ["", "", ""], "answers": ["Look like your little sister!", "Look after your little sister!", "Mean your little sister!"]}, "correct_response": ["b"], "updated": "2016-01-08T21:03:10Z", "section": "", "question_plain": "Cuida de tu hermana peque\u00f1a", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798148, "assessment_type": "multiple-choice", "created": "2016-01-08T21:03:44Z", "prompt": {"relatedLectureIds": "", "question": "<p>Empuja la puerta para abrirla</p>", "answers": ["Pull the door to open it", "Push the door to open it"], "feedbacks": ["", ""]}, "correct_response": ["b"], "updated": "2016-01-08T21:03:44Z", "section": "", "question_plain": "Empuja la puerta para abrirla", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798150, "assessment_type": "multiple-choice", "created": "2016-01-08T21:04:58Z", "prompt": {"relatedLectureIds": "", "question": "<p>Corre para coger ese autobus</p>", "feedbacks": ["", "", "", ""], "answers": ["Run to catch the bus", "Run to forget that bus", "Run to catch this bus", "Run to catch that bus"]}, "correct_response": ["d"], "updated": "2016-01-08T21:04:58Z", "section": "", "question_plain": "Corre para coger ese autobus", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798152, "assessment_type": "multiple-choice", "created": "2016-01-08T21:06:17Z", "prompt": {"relatedLectureIds": "", "question": "<p>El vestido que llevo hoy es nuevo</p>", "feedbacks": ["", "", ""], "answers": ["The dress that I am wearing today is new", "The dress that I am using today is new", "The dress that I am wearing today it is new"]}, "correct_response": ["a"], "updated": "2016-01-08T21:06:17Z", "section": "", "question_plain": "El vestido que llevo hoy es nuevo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798154, "assessment_type": "multiple-choice", "created": "2016-01-08T21:07:06Z", "prompt": {"relatedLectureIds": "", "question": "<p>Cual es el hospital donde trabaja tu hermana?</p>", "answers": ["Which is the hospital where your sister work?", "Which is the hospital where your sister works?", "Where is the hospital where your sister works?"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-08T21:07:06Z", "section": "", "question_plain": "Cual es el hospital donde trabaja tu hermana?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

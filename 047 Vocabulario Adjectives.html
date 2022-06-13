@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>047 Vocabulario Adjectives</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795526, "assessment_type": "multiple-choice", "created": "2016-01-06T19:15:51Z", "prompt": {"answers": ["lleno", "vac\u00edo", "seco"], "question": "<p>full</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:15:51Z", "section": "", "question_plain": "full", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795528, "assessment_type": "multiple-choice", "created": "2016-01-06T19:16:16Z", "prompt": {"answers": ["dark", "cheap", "mad"], "question": "<p>oscuro</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:16:16Z", "section": "", "question_plain": "oscuro", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795530, "assessment_type": "multiple-choice", "created": "2016-01-06T19:16:40Z", "prompt": {"answers": ["high", "brave", "half"], "question": "<p>medio</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T19:16:40Z", "section": "", "question_plain": "medio", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795532, "assessment_type": "multiple-choice", "created": "2016-01-06T19:17:05Z", "prompt": {"answers": ["sure", "bored", "broken"], "question": "<p>aburrido</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:17:05Z", "section": "", "question_plain": "aburrido", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795534, "assessment_type": "multiple-choice", "created": "2016-01-06T19:17:31Z", "prompt": {"answers": ["dry", "full", "dangerous"], "question": "<p>seco</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T19:17:31Z", "section": "", "question_plain": "seco", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795536, "assessment_type": "multiple-choice", "created": "2016-01-06T19:18:10Z", "prompt": {"answers": ["querido", "duro / dificil", "roto"], "question": "<p>hard</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:18:10Z", "section": "", "question_plain": "hard", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795538, "assessment_type": "multiple-choice", "created": "2016-01-06T19:18:37Z", "prompt": {"answers": ["ordenado", "loco", "alto"], "question": "<p>mad</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:18:37Z", "section": "", "question_plain": "mad", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795540, "assessment_type": "multiple-choice", "created": "2016-01-06T19:19:10Z", "prompt": {"answers": ["oscuro", "seguro", "atrevido"], "question": "<p>sure</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T19:19:10Z", "section": "", "question_plain": "sure", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

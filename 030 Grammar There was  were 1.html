@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>030 Grammar There was  were 1</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 804040, "assessment_type": "multiple-choice", "created": "2016-01-13T15:32:04Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ a lamp in the living room.</p>", "answers": ["was", "were"], "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T15:32:04Z", "section": "", "question_plain": "There _____ a lamp in the living room.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804042, "assessment_type": "multiple-choice", "created": "2016-01-13T15:33:28Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ clothes in the closet. It was empty.</p>", "answers": ["was", "were", "weren\u00b4t"], "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2016-01-13T15:33:28Z", "section": "", "question_plain": "There _____ clothes in the closet. It was empty.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804044, "assessment_type": "multiple-choice", "created": "2016-01-13T15:33:44Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ three rooms in the house.</p>", "answers": ["was", "were"], "feedbacks": ["", ""]}, "correct_response": ["b"], "updated": "2016-01-13T15:33:44Z", "section": "", "question_plain": "There _____ three rooms in the house.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804046, "assessment_type": "multiple-choice", "created": "2016-01-13T15:33:59Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ children playing in the park.</p>", "feedbacks": ["", ""], "answers": ["was", "were"]}, "correct_response": ["b"], "updated": "2016-01-13T15:33:59Z", "section": "", "question_plain": "There _____ children playing in the park.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804048, "assessment_type": "multiple-choice", "created": "2016-01-13T15:34:19Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ any sugar in my coffee.</p>", "answers": ["was", "were", "wasn\u00b4t", "weren\u00b4t"], "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-13T15:34:19Z", "section": "", "question_plain": "There _____ any sugar in my coffee.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804052, "assessment_type": "multiple-choice", "created": "2016-01-13T15:34:34Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ a hotel in town.</p>", "answers": ["was", "were"], "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T15:34:34Z", "section": "", "question_plain": "There _____ a hotel in town.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804054, "assessment_type": "multiple-choice", "created": "2016-01-13T15:34:50Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ a book on the table.</p>", "answers": ["was", "were"], "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T15:34:50Z", "section": "", "question_plain": "There _____ a book on the table.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804056, "assessment_type": "multiple-choice", "created": "2016-01-13T15:35:16Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ some students at the library.</p>", "answers": ["was", "were", "wasn\u00b4t", "weren\u00b4t"], "feedbacks": ["", "", "", ""]}, "correct_response": ["b"], "updated": "2016-01-13T15:35:16Z", "section": "", "question_plain": "There _____ some students at the library.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804058, "assessment_type": "multiple-choice", "created": "2016-01-13T15:35:40Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ no people at the concert.</p>", "answers": ["was", "were", "wasn\u00b4t", "weren\u00b4t"], "feedbacks": ["", "", "", ""]}, "correct_response": ["b"], "updated": "2016-01-13T15:35:40Z", "section": "", "question_plain": "There _____ no people at the concert.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804060, "assessment_type": "multiple-choice", "created": "2016-01-13T15:35:55Z", "prompt": {"relatedLectureIds": "", "question": "<p>There _____ a party at Mike's apartment.</p>", "feedbacks": ["", ""], "answers": ["was", "were"]}, "correct_response": ["a"], "updated": "2016-01-13T15:35:55Z", "section": "", "question_plain": "There _____ a party at Mike's apartment.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

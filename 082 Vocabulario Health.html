@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>082 Vocabulario Health</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 5, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796258, "assessment_type": "multiple-choice", "created": "2016-01-07T12:09:45Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["enfermo ", "dolor de cabeza", "cansado"], "question": "<p>headache</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T12:09:45Z", "section": "", "question_plain": "headache", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796260, "assessment_type": "multiple-choice", "created": "2016-01-07T12:10:27Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["fine", "cold", "tired"], "question": "<p>cansado</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T12:10:27Z", "section": "", "question_plain": "cansado", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796262, "assessment_type": "multiple-choice", "created": "2016-01-07T12:11:03Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["enfermo ", "frio", "tos"], "question": "<p>cough</p>", "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T12:11:03Z", "section": "", "question_plain": "cough", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796264, "assessment_type": "multiple-choice", "created": "2016-01-07T12:11:35Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["enfermo ", "temperatura", "dolor de muelas"], "question": "<p>ill</p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T12:11:35Z", "section": "", "question_plain": "ill", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796268, "assessment_type": "multiple-choice", "created": "2016-01-07T12:12:35Z", "prompt": {"feedbacks": ["", "", ""], "answers": ["\u200bbien", "dolor de muelas", "cansado"], "question": "<p>fine<span></span></p>", "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T12:12:35Z", "section": "", "question_plain": "fine", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

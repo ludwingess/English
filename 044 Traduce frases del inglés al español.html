@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>044 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 798194, "assessment_type": "multiple-choice", "created": "2016-01-08T21:21:50Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>You should go to the dentist</p>", "answers": ["Debes ir al dentista", "Deber\u00edas ir al dentista", "Quiz\u00e1s tendr\u00edas que ir al dentista"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-18T09:45:15Z", "section": "", "question_plain": "You should go to the dentist", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798196, "assessment_type": "multiple-choice", "created": "2016-01-08T21:22:44Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>You must remember his birthday</p>", "answers": ["Deber\u00edas acordarte de su cumplea\u00f1os", "Debes acordarte de su cumplea\u00f1os", "Puedes acordarte de su cumplea\u00f1os"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-18T09:45:15Z", "section": "", "question_plain": "You must remember his birthday", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798198, "assessment_type": "multiple-choice", "created": "2016-01-08T21:23:25Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>I have to wear glasses</p>", "answers": ["Tengo que llevar gafas", "Deber\u00eda llevar gafas", "Quiz\u00e1s tengo que llevar gafas"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-18T09:45:15Z", "section": "", "question_plain": "I have to wear glasses", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798200, "assessment_type": "multiple-choice", "created": "2016-01-08T21:24:10Z", "prompt": {"feedbacks": ["", ""], "question": "<p>I have to do something before I go home</p>", "answers": ["Deber\u00eda hacer algo antes de ir a casa ", "Tengo que hacer algo antes de ir a casa "], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-18T09:45:15Z", "section": "", "question_plain": "I have to do something before I go home", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798202, "assessment_type": "multiple-choice", "created": "2016-01-08T21:25:03Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>I may go to the cinema tonight</p>", "answers": ["Deber\u00eda ir al cine esta noche", "Quizas vaya al cine esta noche", "Tengo que ir al cine esta noche"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-18T09:45:15Z", "section": "", "question_plain": "I may go to the cinema tonight", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798204, "assessment_type": "multiple-choice", "created": "2016-01-08T21:25:48Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>There are no taxis, I have to walk home</p>", "answers": ["No hay taxis, tengo que andar a casa", "No hay taxis, tengo que ir a casa", "No quedan taxis, tengo que andar a casa"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-18T09:45:15Z", "section": "", "question_plain": "There are no taxis, I have to walk home", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798206, "assessment_type": "multiple-choice", "created": "2016-01-08T21:26:35Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>Do you have to leave now?</p>", "answers": ["Te tienes que ir ahora?", "Tendrias que ir ahora?", "Te tienes que venir ahora?"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-18T09:45:15Z", "section": "", "question_plain": "Do you have to leave now?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

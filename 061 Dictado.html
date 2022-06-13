@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>061 Dictado</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 1, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 801068, "assessment_type": "multiple-choice", "created": "2016-01-11T15:21:39Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["This is my dream room. I love music. There are music posters, stickers and posters\nin the wall. I\u00b4ve got lots of CD, a CD player and Mp3 player. And look! I can\nwatch films. I\u00b4ve got a TV and a DVD player. There are lots of toys in my bedroom.\nThere are dolls, pizzas and board games. I can play in my room all day!", "This is my dream room. I love music. There are music posters, stickers and posters\non the wall. I\u00b4ve got lots of CD\u00b4s, a CD player and Mp3 player. And look! I can\nwatch films. I\u00b4ve got a TV and a DVD player. There are lots of toys in my room.\nThere are dolls, puzzles and board games. I can play in my room all day!"], "question": "<p>Which answer is exactly what the teacher said?</p>"}, "correct_response": ["b"], "updated": "2016-01-11T15:21:39Z", "section": "", "question_plain": "Which answer is exactly what the teacher said?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

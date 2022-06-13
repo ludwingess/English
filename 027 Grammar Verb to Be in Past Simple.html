@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>027 Grammar Verb to Be in Past Simple</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 803944, "assessment_type": "multiple-choice", "created": "2016-01-13T15:01:39Z", "prompt": {"question": "<p>Where ______ the party?</p><ul></ul>", "answers": ["was", "were"], "relatedLectureIds": "", "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T15:01:39Z", "section": "", "question_plain": "Where ______ the party?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803946, "assessment_type": "multiple-choice", "created": "2016-01-13T15:02:00Z", "prompt": {"question": "<p>My house ______ very nice.</p><ul></ul>", "feedbacks": ["", ""], "answers": ["was", "were"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T15:02:00Z", "section": "", "question_plain": "My house ______ very nice.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803948, "assessment_type": "multiple-choice", "created": "2016-01-13T15:02:16Z", "prompt": {"question": "<p>The village _______ very small.</p><ul></ul>", "answers": ["was", "were"], "relatedLectureIds": "", "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T15:02:16Z", "section": "", "question_plain": "The village _______ very small.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803950, "assessment_type": "multiple-choice", "created": "2016-01-13T15:02:30Z", "prompt": {"question": "<p>I _____ born in France. I am French.</p><ul></ul>", "answers": ["was", "were"], "feedbacks": ["", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T15:02:30Z", "section": "", "question_plain": "I _____ born in France. I am French.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803952, "assessment_type": "multiple-choice", "created": "2016-01-13T15:02:47Z", "prompt": {"question": "<p>When _____ Jane\u00b4s birthday?</p><ul></ul>", "answers": ["was", "were"], "relatedLectureIds": "", "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T15:02:47Z", "section": "", "question_plain": "When _____ Jane\u00b4s birthday?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803954, "assessment_type": "multiple-choice", "created": "2016-01-13T15:03:01Z", "prompt": {"question": "<p>I _____ home yesterday.</p><ul></ul>", "answers": ["was", "were"], "relatedLectureIds": "", "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T15:03:01Z", "section": "", "question_plain": "I _____ home yesterday.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803958, "assessment_type": "multiple-choice", "created": "2016-01-13T15:03:15Z", "prompt": {"question": "<p>My family ____ very happy when I arrived.</p><ul></ul>", "answers": ["was", "were"], "feedbacks": ["", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T15:03:15Z", "section": "", "question_plain": "My family ____ very happy when I arrived.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803960, "assessment_type": "multiple-choice", "created": "2016-01-13T15:03:39Z", "prompt": {"question": "<p>I phoned you but you ______ home yesterday.</p><ul></ul>", "answers": ["wasn\u00b4t", "weren\u00b4t"], "relatedLectureIds": "", "feedbacks": ["", ""]}, "correct_response": ["b"], "updated": "2016-01-13T15:03:39Z", "section": "", "question_plain": "I phoned you but you ______ home yesterday.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803962, "assessment_type": "multiple-choice", "created": "2016-01-13T15:04:07Z", "prompt": {"question": "<p>_____ you at school yesterday?</p><ul></ul>", "feedbacks": ["", "", ""], "answers": ["Was", "Were", "Did"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:04:07Z", "section": "", "question_plain": "_____ you at school yesterday?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803964, "assessment_type": "multiple-choice", "created": "2016-01-13T15:04:22Z", "prompt": {"question": "<p>My sister and I ______ really tired after the competition.</p><ul></ul>", "feedbacks": ["", ""], "answers": ["was", "were"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T15:04:22Z", "section": "", "question_plain": "My sister and I ______ really tired after the competition.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>046 Vocabulario Adverbs</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795506, "assessment_type": "multiple-choice", "created": "2016-01-06T19:08:06Z", "prompt": {"question": "<p>un poco</p>", "relatedLectureIds": "", "answers": ["away", "a little", "most"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:08:06Z", "section": "", "question_plain": "un poco", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795508, "assessment_type": "multiple-choice", "created": "2016-01-06T19:09:14Z", "prompt": {"question": "<p>maybe</p>", "relatedLectureIds": "", "answers": ["Solo / acabo de", "quizas", "antes de "], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:09:14Z", "section": "", "question_plain": "maybe", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795510, "assessment_type": "multiple-choice", "created": "2016-01-06T19:09:38Z", "prompt": {"question": "<p>aqu\u00ed</p>", "relatedLectureIds": "", "answers": ["here", "there", "their"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T19:09:38Z", "section": "", "question_plain": "aqu\u00ed", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795512, "assessment_type": "multiple-choice", "created": "2016-01-06T19:10:08Z", "prompt": {"answers": ["mas tarde", "s\u00f3lo", "fuera"], "relatedLectureIds": "", "question": "<p>only</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:10:08Z", "section": "", "question_plain": "only", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795514, "assessment_type": "multiple-choice", "created": "2016-01-06T19:10:40Z", "prompt": {"question": "<p>entonces</p>", "relatedLectureIds": "", "answers": ["then", "too", "without"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T19:10:40Z", "section": "", "question_plain": "entonces", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795516, "assessment_type": "multiple-choice", "created": "2016-01-06T19:11:07Z", "prompt": {"question": "<p>without</p>", "relatedLectureIds": "", "answers": ["con", "sin", "aun no"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:11:07Z", "section": "", "question_plain": "without", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795518, "assessment_type": "multiple-choice", "created": "2016-01-06T19:11:32Z", "prompt": {"question": "<p>soon</p>", "relatedLectureIds": "", "answers": ["entonces", "desde", "pronto"], "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2016-01-06T19:11:32Z", "section": "", "question_plain": "soon", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795520, "assessment_type": "multiple-choice", "created": "2016-01-06T19:13:33Z", "prompt": {"question": "<p>many</p>", "relatedLectureIds": "", "answers": ["muchos", "mas tarde", "lejos"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T19:13:33Z", "section": "", "question_plain": "many", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795522, "assessment_type": "multiple-choice", "created": "2016-01-06T19:14:09Z", "prompt": {"question": "<p>later</p>", "relatedLectureIds": "", "answers": ["fuera", "mas tarde", "pronto"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T19:14:09Z", "section": "", "question_plain": "later", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795524, "assessment_type": "multiple-choice", "created": "2016-01-06T19:14:40Z", "prompt": {"answers": ["solo / acabo de", "fuera", "alrededor"], "relatedLectureIds": "", "question": "<p>just</p>", "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T19:14:40Z", "section": "", "question_plain": "just", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

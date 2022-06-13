@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>037 Vocabulario Food  Drinks</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795442, "assessment_type": "multiple-choice", "created": "2016-01-06T18:32:36Z", "prompt": {"question": "<p>mantequilla</p>", "feedbacks": ["", "", ""], "answers": ["chopsticks ", "candy", "butter"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T18:32:36Z", "section": "", "question_plain": "mantequilla", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795446, "assessment_type": "multiple-choice", "created": "2016-01-06T18:33:07Z", "prompt": {"question": "<p>botella</p>", "feedbacks": ["", "", ""], "answers": ["bottle", "flour", "jam"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T18:33:07Z", "section": "", "question_plain": "botella", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795448, "assessment_type": "multiple-choice", "created": "2016-01-06T18:33:41Z", "prompt": {"question": "<p>tenedor</p>", "feedbacks": ["", "", ""], "answers": ["knife", "fork", "meal"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:33:41Z", "section": "", "question_plain": "tenedor", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795450, "assessment_type": "multiple-choice", "created": "2016-01-06T18:34:12Z", "prompt": {"question": "<p>taza</p>", "feedbacks": ["", "", ""], "answers": ["flour", "cup", "plate"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:34:12Z", "section": "", "question_plain": "taza", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795452, "assessment_type": "multiple-choice", "created": "2016-01-06T18:34:44Z", "prompt": {"question": "<p>hambriento</p>", "feedbacks": ["", "", ""], "answers": ["spoon", "bowl", "hungry"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-06T18:34:44Z", "section": "", "question_plain": "hambriento", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795454, "assessment_type": "multiple-choice", "created": "2016-01-06T18:35:15Z", "prompt": {"question": "<p>queso</p>", "feedbacks": ["", "", ""], "answers": ["cookie", "cheese", "glass"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:35:15Z", "section": "", "question_plain": "queso", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795458, "assessment_type": "multiple-choice", "created": "2016-01-06T18:35:57Z", "prompt": {"question": "<p>meal</p>", "feedbacks": ["", "", ""], "answers": ["plate", "comida", "verdura"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-06T18:35:57Z", "section": "", "question_plain": "meal", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795462, "assessment_type": "multiple-choice", "created": "2016-01-06T18:36:27Z", "prompt": {"question": "<p>flour</p>", "feedbacks": ["", "", ""], "answers": ["harina", "tenedor", "pimienta"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-06T18:36:27Z", "section": "", "question_plain": "flour", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

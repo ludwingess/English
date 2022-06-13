@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>075 Vocabulario Adjectives</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796216, "assessment_type": "multiple-choice", "created": "2016-01-07T11:55:42Z", "prompt": {"question": "<p>encantador</p>", "feedbacks": ["", "", ""], "answers": ["noisy", "lovely", "untidy"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T11:55:42Z", "section": "", "question_plain": "encantador", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796220, "assessment_type": "multiple-choice", "created": "2016-01-07T11:56:21Z", "prompt": {"relatedLectureIds": "", "answers": ["soft", "ready", "single"], "question": "<p>suave</p>", "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-07T11:56:21Z", "section": "", "question_plain": "suave", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796222, "assessment_type": "multiple-choice", "created": "2016-01-07T11:57:09Z", "prompt": {"answers": ["missing", "noisy", "kind"], "relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>ruidoso</p>"}, "correct_response": ["b"], "updated": "2016-01-07T11:57:09Z", "section": "", "question_plain": "ruidoso", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796224, "assessment_type": "multiple-choice", "created": "2016-01-07T11:57:42Z", "prompt": {"answers": ["low", "poor", "soft"], "relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>bajo</p>"}, "correct_response": ["a"], "updated": "2016-01-07T11:57:42Z", "section": "", "question_plain": "bajo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796226, "assessment_type": "multiple-choice", "created": "2016-01-07T11:58:16Z", "prompt": {"relatedLectureIds": "", "answers": ["desaparecido", "tarde", "listo"], "question": "<p>late</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-07T11:58:16Z", "section": "", "question_plain": "late", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796228, "assessment_type": "multiple-choice", "created": "2016-01-07T11:58:53Z", "prompt": {"answers": ["de puntos", "rico", "estra\u00f1o"], "relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>spotted</p>"}, "correct_response": ["a"], "updated": "2016-01-07T11:58:53Z", "section": "", "question_plain": "spotted", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796230, "assessment_type": "multiple-choice", "created": "2016-01-07T11:59:32Z", "prompt": {"answers": ["married", "striped", "warm"], "relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>casado</p>"}, "correct_response": ["a"], "updated": "2016-01-07T11:59:32Z", "section": "", "question_plain": "casado", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796232, "assessment_type": "multiple-choice", "created": "2016-01-07T12:00:06Z", "prompt": {"relatedLectureIds": "", "answers": ["single", "ready", "kind"], "question": "<p>listo</p>", "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-07T12:00:06Z", "section": "", "question_plain": "listo", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

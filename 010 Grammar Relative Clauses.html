@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>010 Grammar Relative Clauses</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 803782, "assessment_type": "multiple-choice", "created": "2016-01-13T12:18:21Z", "prompt": {"question": "<p>Japan is the country ______ I want to live.</p>", "feedbacks": ["", "", ""], "answers": ["when", "what", "where"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T12:18:21Z", "section": "", "question_plain": "Japan is the country ______ I want to live.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803784, "assessment_type": "multiple-choice", "created": "2016-01-13T12:18:48Z", "prompt": {"question": "<p>I take the bus ______ goes to the airport</p>", "feedbacks": ["", "", ""], "answers": ["where", "what", "that"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T12:18:48Z", "section": "", "question_plain": "I take the bus ______ goes to the airport", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803790, "assessment_type": "multiple-choice", "created": "2016-01-13T12:20:37Z", "prompt": {"question": "<p>My sister Amy, ______ is older that me, is studying economics.</p>", "feedbacks": ["", "", ""], "answers": ["what", "which", "who"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T12:20:37Z", "section": "", "question_plain": "My sister Amy, ______ is older that me, is studying economics.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803792, "assessment_type": "multiple-choice", "created": "2016-01-13T12:21:12Z", "prompt": {"question": "<p>What is the name of the restaurant _____ we are going tonight?</p>", "feedbacks": ["", "", ""], "answers": ["what", "when", "where"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T12:21:12Z", "section": "", "question_plain": "What is the name of the restaurant _____ we are going tonight?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803794, "assessment_type": "multiple-choice", "created": "2016-01-13T12:21:47Z", "prompt": {"question": "<p>Will Smith is the man _____ acts in Men in Black</p>", "feedbacks": ["", "", ""], "answers": ["who", "what", "whose"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T12:21:47Z", "section": "", "question_plain": "Will Smith is the man _____ acts in Men in Black", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803796, "assessment_type": "multiple-choice", "created": "2016-01-13T12:22:19Z", "prompt": {"question": "<p>The answers _____ the teacher give me are wrong.</p>", "feedbacks": ["", "", ""], "answers": ["what", "which", "who"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:22:19Z", "section": "", "question_plain": "The answers _____ the teacher give me are wrong.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803800, "assessment_type": "multiple-choice", "created": "2016-01-13T12:22:52Z", "prompt": {"question": "<p>People _____ live in Russia are very friendly.</p>", "feedbacks": ["", "", ""], "answers": ["which", "what", "whose"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T12:22:52Z", "section": "", "question_plain": "People _____ live in Russia are very friendly.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803804, "assessment_type": "multiple-choice", "created": "2016-01-13T12:23:19Z", "prompt": {"question": "<p>The village _____ I live is very big.</p>", "feedbacks": ["", "", ""], "answers": ["where", "what", "who"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T12:23:19Z", "section": "", "question_plain": "The village _____ I live is very big.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803806, "assessment_type": "multiple-choice", "created": "2016-01-13T12:23:47Z", "prompt": {"question": "<p>On Christmas Day is _____ all the family gets together.</p>", "feedbacks": ["", "", ""], "answers": ["where", "what", "when"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-13T12:23:47Z", "section": "", "question_plain": "On Christmas Day is _____ all the family gets together.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803810, "assessment_type": "multiple-choice", "created": "2016-01-13T12:24:27Z", "prompt": {"question": "<p>The city _____ I live is too big.</p>", "feedbacks": ["", "", ""], "answers": ["where", "when", "whose"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-13T12:24:27Z", "section": "", "question_plain": "The city _____ I live is too big.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

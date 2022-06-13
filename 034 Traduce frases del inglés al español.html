@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>034 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 798158, "assessment_type": "multiple-choice", "created": "2016-01-08T21:08:58Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>I gave him his glasses</p>", "answers": ["Le pedi sus gafas a \u00e9l", "Le di sus gafas a \u00e9l", "Le prest\u00e9 sus gafas a \u00e9l"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-08T21:08:58Z", "section": "", "question_plain": "I gave him his glasses", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798160, "assessment_type": "multiple-choice", "created": "2016-01-08T21:09:57Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>I forgot to buy your scarf</p>", "answers": ["Me olvid\u00e9 de comprar tu bufanda", "Me acord\u00e9 de comprar tu bufanda", "Me olvid\u00e9 de comprar tu faldilla"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-08T21:09:57Z", "section": "", "question_plain": "I forgot to buy your scarf", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798164, "assessment_type": "multiple-choice", "created": "2016-01-08T21:10:49Z", "prompt": {"feedbacks": ["", ""], "question": "<p>I broke my foot when I was 10 years old</p>", "answers": ["Me rompi el pie cuando tenia 10 a\u00f1os", "Me rompi mis pies cuando tenia 10 a\u00f1os"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-08T21:10:49Z", "section": "", "question_plain": "I broke my foot when I was 10 years old", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798166, "assessment_type": "multiple-choice", "created": "2016-01-08T21:11:50Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>I found your hat under the desk</p>", "answers": ["Encontr\u00e9 tu gorro debajo del escritorio", "Encontr\u00e9 tu gorro debajo del caj\u00f3n", "Busqu\u00e9 tu gorro debajo del escritorio"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-08T21:11:50Z", "section": "", "question_plain": "I found your hat under the desk", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798168, "assessment_type": "multiple-choice", "created": "2016-01-08T21:12:39Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>I didn\u00b4t know the answer</p>", "answers": ["No encontr\u00e9 la solucion", "No sabia la solucion", "No entend\u00ed la solucion"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-08T21:12:39Z", "section": "", "question_plain": "I didn\u00b4t know the answer", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798170, "assessment_type": "multiple-choice", "created": "2016-01-08T21:13:47Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Where did you live when you were young?</p>", "answers": ["Por donde sal\u00edas cuando eras joven?", "Donde viv\u00edas cuando eras joven?"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-08T21:13:47Z", "section": "", "question_plain": "Where did you live when you were young?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798172, "assessment_type": "multiple-choice", "created": "2016-01-08T21:14:36Z", "prompt": {"feedbacks": ["", ""], "question": "<p>The store didn\u00b4t open this morning</p>", "answers": ["La tienda no abre esta ma\u00f1ana", "La tienda no abrio esta ma\u00f1ana"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-08T21:14:36Z", "section": "", "question_plain": "The store didn\u00b4t open this morning", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

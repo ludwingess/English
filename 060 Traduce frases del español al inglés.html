@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>060 Traduce frases del español al inglés</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 800734, "assessment_type": "multiple-choice", "created": "2016-01-11T11:56:04Z", "prompt": {"question": "<p>Yo no quiero ser un profesor</p>", "feedbacks": ["", "", ""], "answers": ["I won\u00b4t be a teacher", "I don\u00b4t want be a teacher", "I don\u00b4t want to be a teacher"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-11T11:56:04Z", "section": "", "question_plain": "Yo no quiero ser un profesor", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800738, "assessment_type": "multiple-choice", "created": "2016-01-11T11:56:58Z", "prompt": {"question": "<p>Nevar\u00e1 ma\u00f1ana</p>", "feedbacks": ["", "", ""], "answers": ["Will snow tomorrow", "It will snow tomorrow", "Will storm tomorrow"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T11:56:58Z", "section": "", "question_plain": "Nevar\u00e1 ma\u00f1ana", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800740, "assessment_type": "multiple-choice", "created": "2016-01-11T11:57:36Z", "prompt": {"question": "<p>Buscaras mis gafas?</p>", "feedbacks": ["", "", "", ""], "answers": ["You will look for my glasses?", "Will you find my glasses?", "Will you look for my glasses?", "Will you look my glasses?"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-11T11:57:36Z", "section": "", "question_plain": "Buscaras mis gafas?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800742, "assessment_type": "multiple-choice", "created": "2016-01-11T11:58:50Z", "prompt": {"question": "<p>El te escribira pronto</p>", "feedbacks": ["", "", "", ""], "answers": ["He will write you soon", "He will write you earlier", "He will write you yet", "He will read you soon"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-11T11:58:50Z", "section": "", "question_plain": "El te escribira pronto", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800744, "assessment_type": "multiple-choice", "created": "2016-01-11T12:00:01Z", "prompt": {"question": "<p>Cuidaras de tu hermano?</p>", "feedbacks": ["", "", "", "", ""], "answers": ["Will you look like your brother?", "Will you look care your brother?", "Will you look after your brother?", "You will look after your brother?", "Will you look after you brother?"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-11T12:00:01Z", "section": "", "question_plain": "Cuidaras de tu hermano?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800748, "assessment_type": "multiple-choice", "created": "2016-01-11T12:01:31Z", "prompt": {"question": "<p>Nuestras vacaciones seran baratas</p>", "feedbacks": ["", "", ""], "answers": ["Us holiday will cheap", "Our holiday will be cheap", "Our holiday will be weak"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T12:01:31Z", "section": "", "question_plain": "Nuestras vacaciones seran baratas", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800752, "assessment_type": "multiple-choice", "created": "2016-01-11T12:02:36Z", "prompt": {"question": "<p>Tendr\u00e9 18 a\u00f1os en octubre</p>", "feedbacks": ["", "", ""], "answers": ["I will have 18 in October", "I will be 18 in October", "I will be 18 years in october"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T12:02:36Z", "section": "", "question_plain": "Tendr\u00e9 18 a\u00f1os en octubre", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800758, "assessment_type": "multiple-choice", "created": "2016-01-11T12:03:15Z", "prompt": {"question": "<p>Iran de compras ma\u00f1ana?</p>", "feedbacks": ["", "", ""], "answers": ["They will go shopping tomorrow?", "Will they go shopping tomorrow?", "Will they go to shop tomorrow?"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-11T12:03:15Z", "section": "", "question_plain": "Iran de compras ma\u00f1ana?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

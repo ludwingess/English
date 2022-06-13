@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>062 Vocabulario At school</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 5, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796168, "assessment_type": "multiple-choice", "created": "2016-01-07T11:24:51Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>asignatura</p>", "answers": ["language", "subject", "flag"]}, "correct_response": ["b"], "updated": "2016-01-07T11:24:51Z", "section": "", "question_plain": "asignatura", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796170, "assessment_type": "multiple-choice", "created": "2016-01-07T11:25:25Z", "prompt": {"question": "<p>glue</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["pegamento", "mochila", "tijeras"]}, "correct_response": ["a"], "updated": "2016-01-07T11:25:25Z", "section": "", "question_plain": "glue", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796172, "assessment_type": "multiple-choice", "created": "2016-01-07T11:26:03Z", "prompt": {"relatedLectureIds": "", "answers": ["compa\u00f1ero de clase", "club", "asignatura"], "question": "<p>classmate</p>", "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-07T11:26:03Z", "section": "", "question_plain": "classmate", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796174, "assessment_type": "multiple-choice", "created": "2016-01-07T11:26:51Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>bin</p>", "answers": ["papelera", "mochila", "bandera"]}, "correct_response": ["a"], "updated": "2016-01-07T11:26:51Z", "section": "", "question_plain": "bin", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796176, "assessment_type": "multiple-choice", "created": "2016-01-07T11:27:33Z", "prompt": {"relatedLectureIds": "", "answers": ["mochila", "tijeras", "historia"], "question": "<p>rucksack</p>", "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-07T11:27:33Z", "section": "", "question_plain": "rucksack", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

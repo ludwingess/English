@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>040 Grammar Modal verbs Must or should</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 5, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 804262, "assessment_type": "multiple-choice", "created": "2016-01-13T19:39:13Z", "prompt": {"answers": ["mustn\u00b4t", "shouldn\u00b4t"], "feedbacks": ["", ""], "question": "<p>You _____ run in the swimming pool.</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T19:39:13Z", "section": "", "question_plain": "You _____ run in the swimming pool.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804264, "assessment_type": "multiple-choice", "created": "2016-01-13T19:39:39Z", "prompt": {"relatedLectureIds": "", "answers": ["mustn\u00b4t", "shouldn\u00b4t"], "question": "<p>You _____ drive if you drink.</p>", "feedbacks": ["", ""]}, "correct_response": ["a"], "updated": "2016-01-13T19:39:39Z", "section": "", "question_plain": "You _____ drive if you drink.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804266, "assessment_type": "multiple-choice", "created": "2016-01-13T19:40:10Z", "prompt": {"answers": ["should", "must"], "relatedLectureIds": "", "feedbacks": ["", ""], "question": "<p>You _____ bring a camera if you go to a safari.</p>"}, "correct_response": ["a"], "updated": "2016-01-13T19:40:10Z", "section": "", "question_plain": "You _____ bring a camera if you go to a safari.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804268, "assessment_type": "multiple-choice", "created": "2016-01-13T19:40:42Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["should", "shouldn\u00b4t", "must"], "question": "<p>I think you _____ tell lies.</p>"}, "correct_response": ["b"], "updated": "2016-01-13T19:40:42Z", "section": "", "question_plain": "I think you _____ tell lies.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 804270, "assessment_type": "multiple-choice", "created": "2016-01-13T19:41:11Z", "prompt": {"answers": ["shouldn\u00b4t", "mustn\u00b4t"], "feedbacks": ["", ""], "question": "<p>You _____ steal pencils from the school.</p>", "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T19:41:11Z", "section": "", "question_plain": "You _____ steal pencils from the school.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

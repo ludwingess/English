@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>049 Reading comprehension quiz</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796732, "assessment_type": "multiple-choice", "created": "2016-01-07T18:35:33Z", "prompt": {"answers": ["Because she is moving to a new house today.", "Because she is moving to a new town today.", "Because she is starting a new school today.", "Because she is walking to school alone today."], "question": "<p>Why\nis Sue sad and scared?</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:35:33Z", "section": "", "question_plain": "Why\nis Sue sad and scared?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796734, "assessment_type": "multiple-choice", "created": "2016-01-07T18:36:09Z", "prompt": {"answers": ["Sue\u00b4s teacher", "Sue\u00b4s new classmates", "Sue\u00b4s father", "Sue\u00b4s friends"], "relatedLectureIds": "", "question": "<p>Who\ndecided to take Sue to another school?</p>", "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:36:09Z", "section": "", "question_plain": "Who\ndecided to take Sue to another school?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796736, "assessment_type": "multiple-choice", "created": "2016-01-07T18:36:48Z", "prompt": {"answers": ["because she is sleepy", "because she is nervous", "because she has a cold", "because she ate too much"], "relatedLectureIds": "", "question": "<p>Why\ndoes Sue's dad think she feels sick?</p>", "feedbacks": ["", "", "", ""]}, "correct_response": ["b"], "updated": "2016-01-07T18:36:48Z", "section": "", "question_plain": "Why\ndoes Sue's dad think she feels sick?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796738, "assessment_type": "multiple-choice", "created": "2016-01-07T18:37:21Z", "prompt": {"answers": ["The classroom", "Many things", "Nothing", "The school looks bigger"], "relatedLectureIds": "", "question": "<p>What\ndoes she like about the school before she gets in?</p>", "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2016-01-07T18:37:21Z", "section": "", "question_plain": "What\ndoes she like about the school before she gets in?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796740, "assessment_type": "multiple-choice", "created": "2016-01-07T18:37:52Z", "prompt": {"answers": ["Sue goes to school by car", "She doesn\u00b4t go to school", "She walks to school with her dad", "She walks to school with her classmates"], "question": "<p>How\ndoes Sue get to school?</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:37:52Z", "section": "", "question_plain": "How\ndoes Sue get to school?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796742, "assessment_type": "multiple-choice", "created": "2016-01-07T18:38:43Z", "prompt": {"answers": ["her other school", "her stomach", "having friends", "her subjects"], "question": "<p>What\ndoes Sue think about as she walks?</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:38:43Z", "section": "", "question_plain": "What\ndoes Sue think about as she walks?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796746, "assessment_type": "multiple-choice", "created": "2016-01-07T18:39:18Z", "prompt": {"answers": ["big", "dirty", "loud", "small"], "question": "<p>What\nis Sue's new school like?</p>", "feedbacks": ["", "", "", ""], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T18:39:18Z", "section": "", "question_plain": "What\nis Sue's new school like?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796748, "assessment_type": "multiple-choice", "created": "2016-01-07T18:39:58Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["friendly", "pretty", "funny", "not very nice"], "question": "<p>How\ndo the children in Sue's class seem?</p>"}, "correct_response": ["a"], "updated": "2016-01-07T18:39:58Z", "section": "", "question_plain": "How\ndo the children in Sue's class seem?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

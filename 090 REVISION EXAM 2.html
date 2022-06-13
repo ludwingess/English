@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>090 REVISION EXAM 2</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 10, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 805964, "assessment_type": "multiple-choice", "created": "2016-01-14T12:32:38Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>I will maybe go to Italy on holidays next summer.</p><ul></ul>"}, "correct_response": ["a"], "updated": "2016-01-14T12:33:05Z", "section": "", "question_plain": "I will maybe go to Italy on holidays next summer.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805972, "assessment_type": "multiple-choice", "created": "2016-01-14T12:34:44Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>Have you ever watched this film before?</p><ul></ul>"}, "correct_response": ["a"], "updated": "2016-01-14T12:34:44Z", "section": "", "question_plain": "Have you ever watched this film before?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805974, "assessment_type": "multiple-choice", "created": "2016-01-14T12:35:03Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>Do you will come to the party tonight?</p><ul></ul>"}, "correct_response": ["b"], "updated": "2016-01-14T12:35:03Z", "section": "", "question_plain": "Do you will come to the party tonight?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805978, "assessment_type": "multiple-choice", "created": "2016-01-14T12:35:29Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>She is coming for dinner tonight, isn\u00b4t she?</p><ul></ul>"}, "correct_response": ["a"], "updated": "2016-01-14T12:35:29Z", "section": "", "question_plain": "She is coming for dinner tonight, isn\u00b4t she?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805980, "assessment_type": "multiple-choice", "created": "2016-01-14T12:35:45Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>I haven\u00b4t never been in a safari.</p><ul></ul>"}, "correct_response": ["b"], "updated": "2016-01-14T12:35:45Z", "section": "", "question_plain": "I haven\u00b4t never been in a safari.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805982, "assessment_type": "multiple-choice", "created": "2016-01-14T12:36:05Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>There were a lot of people in the stadium last night.</p><ul></ul>"}, "correct_response": ["a"], "updated": "2016-01-14T12:36:05Z", "section": "", "question_plain": "There were a lot of people in the stadium last night.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805984, "assessment_type": "multiple-choice", "created": "2016-01-14T12:36:27Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>They left at 3 am this morning, don\u00b4t they?</p><ul></ul>"}, "correct_response": ["b"], "updated": "2016-01-14T12:36:27Z", "section": "", "question_plain": "They left at 3 am this morning, don\u00b4t they?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805988, "assessment_type": "multiple-choice", "created": "2016-01-14T12:36:48Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>It sounded like there were somebody in the house.</p><ul></ul>"}, "correct_response": ["b"], "updated": "2016-01-14T12:36:48Z", "section": "", "question_plain": "It sounded like there were somebody in the house.", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805990, "assessment_type": "multiple-choice", "created": "2016-01-14T12:37:08Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>What about going to the swimming pool later?</p><ul></ul>"}, "correct_response": ["a"], "updated": "2016-01-14T12:37:08Z", "section": "", "question_plain": "What about going to the swimming pool later?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 805994, "assessment_type": "multiple-choice", "created": "2016-01-14T12:37:53Z", "prompt": {"feedbacks": ["", ""], "relatedLectureIds": "", "answers": ["Correct", "Incorrect"], "question": "<p>He made me do a mistake.</p><ul></ul>"}, "correct_response": ["b"], "updated": "2016-01-14T12:37:53Z", "section": "", "question_plain": "He made me do a mistake.", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

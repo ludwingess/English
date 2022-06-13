@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>017 Vocabulario Indefinite Pronouns</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795354, "assessment_type": "multiple-choice", "created": "2016-01-06T17:56:46Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>EVERYBODY</p>", "relatedLectureIds": "", "answers": ["todas partes", "todo el mundo", "alguien  "]}, "correct_response": ["b"], "updated": "2016-01-06T17:56:46Z", "section": "", "question_plain": "EVERYBODY", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795356, "assessment_type": "multiple-choice", "created": "2016-01-06T17:57:15Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>todo  </p>", "relatedLectureIds": "", "answers": ["EVERYTHING", "NOTHING", "ANYTHING"]}, "correct_response": ["a"], "updated": "2016-01-06T17:57:15Z", "section": "", "question_plain": "todo", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795358, "assessment_type": "multiple-choice", "created": "2016-01-06T17:57:47Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>NOTHING</p>", "relatedLectureIds": "", "answers": ["alguien  ", "ningun sitio", "nada"]}, "correct_response": ["c"], "updated": "2016-01-06T17:57:47Z", "section": "", "question_plain": "NOTHING", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795360, "assessment_type": "multiple-choice", "created": "2016-01-06T17:58:20Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>nadie</p>", "relatedLectureIds": "", "answers": ["NOWHERE", "NOBODY", "EVERYBODY"]}, "correct_response": ["b"], "updated": "2016-01-06T17:58:20Z", "section": "", "question_plain": "nadie", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795362, "assessment_type": "multiple-choice", "created": "2016-01-06T17:58:54Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>SOMEWHERE</p>", "relatedLectureIds": "", "answers": ["todas partes", "alg\u00fan sitio  ", "Alguien / nadie"]}, "correct_response": ["b"], "updated": "2016-01-06T17:58:54Z", "section": "", "question_plain": "SOMEWHERE", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795364, "assessment_type": "multiple-choice", "created": "2016-01-06T17:59:45Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>Alguien / nadie</p>", "relatedLectureIds": "", "answers": ["SOMEONE", "ANYBODY", "ANYTHING"]}, "correct_response": ["b"], "updated": "2016-01-06T17:59:45Z", "section": "", "question_plain": "Alguien / nadie", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

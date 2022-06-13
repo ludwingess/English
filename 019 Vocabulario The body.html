@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>019 Vocabulario The body</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 795380, "assessment_type": "multiple-choice", "created": "2016-01-06T18:06:24Z", "prompt": {"question": "<p>beard</p>", "relatedLectureIds": "", "answers": ["barba", "rizado", "liso"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T18:11:27Z", "section": "", "question_plain": "beard", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795382, "assessment_type": "multiple-choice", "created": "2016-01-06T18:07:03Z", "prompt": {"question": "<p>shoulder</p>", "relatedLectureIds": "", "answers": ["hombro", "liso", "estomago"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T18:11:27Z", "section": "", "question_plain": "shoulder", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795386, "assessment_type": "multiple-choice", "created": "2016-01-06T18:08:27Z", "prompt": {"question": "<p>curly</p>", "relatedLectureIds": "", "answers": ["bigote", "rizado", "liso"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T18:11:27Z", "section": "", "question_plain": "curly", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795390, "assessment_type": "multiple-choice", "created": "2016-01-06T18:08:57Z", "prompt": {"question": "<p>bottom</p>", "relatedLectureIds": "", "answers": ["rubio", "culo", "cuello"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T18:11:27Z", "section": "", "question_plain": "bottom", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795394, "assessment_type": "multiple-choice", "created": "2016-01-06T18:09:44Z", "prompt": {"question": "<p>straight</p>", "relatedLectureIds": "", "answers": ["liso", "gordo", "rubio"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2016-01-06T18:11:27Z", "section": "", "question_plain": "straight", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 795398, "assessment_type": "multiple-choice", "created": "2016-01-06T18:12:09Z", "prompt": {"question": "<p>neck</p>", "relatedLectureIds": "", "answers": ["hombro", "cuello", "bigote"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2016-01-06T18:12:09Z", "section": "", "question_plain": "neck", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

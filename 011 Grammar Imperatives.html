@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>011 Grammar Imperatives</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 803814, "assessment_type": "multiple-choice", "created": "2016-01-13T12:27:31Z", "prompt": {"question": "<p>clean / your room / you!</p><ul></ul>", "feedbacks": ["", "", ""], "answers": ["Clean your room", "Clean your room!", "You clean your room!"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:27:31Z", "section": "", "question_plain": "clean / your room / you!", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803816, "assessment_type": "multiple-choice", "created": "2016-01-13T12:28:04Z", "prompt": {"question": "<p>you / go / to bed!</p><ul></ul>", "feedbacks": ["", "", ""], "answers": ["You go to bed!", "Go to bed!", "You go to bed"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:28:04Z", "section": "", "question_plain": "you / go / to bed!", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803818, "assessment_type": "multiple-choice", "created": "2016-01-13T12:28:49Z", "prompt": {"question": "<p>Does an Imperative form follow the SVO structure?</p>", "feedbacks": ["", ""], "answers": ["Yes", "No"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:28:49Z", "section": "", "question_plain": "Does an Imperative form follow the SVO structure?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803822, "assessment_type": "multiple-choice", "created": "2016-01-13T12:29:36Z", "prompt": {"question": "<p>you / not eat / in the library!</p><ul></ul>", "feedbacks": ["", "", ""], "answers": ["You don\u00b4t eat in the library!", "Don\u00b4t eat in the library!", "Not eat in the library!"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:29:36Z", "section": "", "question_plain": "you / not eat / in the library!", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803824, "assessment_type": "multiple-choice", "created": "2016-01-13T12:30:16Z", "prompt": {"question": "<p>you / not smoke / cigarettes!</p><ul></ul>", "feedbacks": ["", "", ""], "answers": ["You don\u00b4t smoke cigarettes!", "Don\u00b4t smoke cigarettes!", "Not smoke cigarettes!"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:30:16Z", "section": "", "question_plain": "you / not smoke / cigarettes!", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 803826, "assessment_type": "multiple-choice", "created": "2016-01-13T12:32:04Z", "prompt": {"question": "<p>you / not speak loud / in the library!</p>", "feedbacks": ["", "", ""], "answers": ["You don\u00b4t speak loud in the library!", "Don\u00b4t speak loud in the library!", "Not speak loud in the library!"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-13T12:32:04Z", "section": "", "question_plain": "you / not speak loud / in the library!", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

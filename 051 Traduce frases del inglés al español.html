@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>051 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 6, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 800686, "assessment_type": "multiple-choice", "created": "2016-01-11T11:32:10Z", "prompt": {"question": "<p>My uncle was washing his car</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Mi tio estaba lavando su coche", "Mi tio estaba duchado en su coche", "Mi tio limpi\u00f3 su coche"]}, "correct_response": ["a"], "updated": "2016-01-11T11:32:10Z", "section": "", "question_plain": "My uncle was washing his car", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800688, "assessment_type": "multiple-choice", "created": "2016-01-11T11:33:03Z", "prompt": {"question": "<p>I wasn\u00b4t working yesterday at 10</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Yo no estaba trabajando ayer a las 10", "Yo no estaba para trabajar ayer a las 10", "Yo no estaba preocupado ayer a las 10"]}, "correct_response": ["a"], "updated": "2016-01-11T11:33:03Z", "section": "", "question_plain": "I wasn\u00b4t working yesterday at 10", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800690, "assessment_type": "multiple-choice", "created": "2016-01-11T11:33:44Z", "prompt": {"question": "<p>Were you watching the TV last night?</p>", "relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["Vistes la TV ayer noche?", "Estabas viendo la TV ayer noche?"]}, "correct_response": ["b"], "updated": "2016-01-11T11:33:44Z", "section": "", "question_plain": "Were you watching the TV last night?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800694, "assessment_type": "multiple-choice", "created": "2016-01-11T11:35:04Z", "prompt": {"question": "<p>I am learning to speak English</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Aprendo a hablar ingles", "Estoy aprendiendo a hablar ingles", "Yo soy un estudiante de habla inglesa"]}, "correct_response": ["b"], "updated": "2016-01-11T11:35:04Z", "section": "", "question_plain": "I am learning to speak English", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800698, "assessment_type": "multiple-choice", "created": "2016-01-11T11:37:30Z", "prompt": {"question": "<p>What were you doing last night?</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Que estabas fabricando ayer noche?", "Que estabas haciendo ayer noche?", "Qu\u00e9 haces por las noches?"]}, "correct_response": ["b"], "updated": "2016-01-11T11:37:30Z", "section": "", "question_plain": "What were you doing last night?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 800700, "assessment_type": "multiple-choice", "created": "2016-01-11T11:38:39Z", "prompt": {"question": "<p>Was she waiting for the bus?</p>", "relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["Estaba ella esperando el autob\u00fas?", "Quer\u00eda ella ir en autob\u00fas?", "Quer\u00eda ella esperar el autob\u00fas?"]}, "correct_response": ["a"], "updated": "2016-01-11T11:38:39Z", "section": "", "question_plain": "Was she waiting for the bus?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

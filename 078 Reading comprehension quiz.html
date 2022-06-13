@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>078 Reading comprehension quiz</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 796802, "assessment_type": "multiple-choice", "created": "2016-01-07T18:52:27Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>Why\nis Kim sad?</p>", "answers": ["her friends are not in the park", "she cannot find her Jane", "there is a lot of trash at the park", "she hurts herself on the slide"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:52:27Z", "section": "", "question_plain": "Why\nis Kim sad?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796804, "assessment_type": "multiple-choice", "created": "2016-01-07T18:53:05Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>How\nis the park?</p>", "answers": ["Full of people", "Full of cans", "Green and clean", "Dirty"], "relatedLectureIds": ""}, "correct_response": ["d"], "updated": "2016-01-07T18:53:05Z", "section": "", "question_plain": "How\nis the park?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796808, "assessment_type": "multiple-choice", "created": "2016-01-07T18:53:40Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>What\ndoes Kim do when she gets home?</p>", "answers": ["She cleans.", "She meets some friends", "She paints a big door", "She paints a picture"], "relatedLectureIds": ""}, "correct_response": ["d"], "updated": "2016-01-07T18:53:40Z", "section": "", "question_plain": "What\ndoes Kim do when she gets home?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796812, "assessment_type": "multiple-choice", "created": "2016-01-07T18:54:20Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>Why\ndoes Kim glue her picture to a big door?</p>", "answers": ["so people can see it", "so it falls to the ground", "so people get mad", "she is tired of holding it"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2016-01-07T18:54:20Z", "section": "", "question_plain": "Why\ndoes Kim glue her picture to a big door?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796814, "assessment_type": "multiple-choice", "created": "2016-01-07T18:54:50Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>What\ndoes Kim give to the children?</p>", "answers": ["cans", "papers", "plastics", "trash bags"], "relatedLectureIds": ""}, "correct_response": ["d"], "updated": "2016-01-07T18:54:50Z", "section": "", "question_plain": "What\ndoes Kim give to the children?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796816, "assessment_type": "multiple-choice", "created": "2016-01-07T18:55:25Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>How\nmight Kim and her friends feel after cleaning up?</p>", "answers": ["funny", "mad", "good", "sad"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2016-01-07T18:55:25Z", "section": "", "question_plain": "How\nmight Kim and her friends feel after cleaning up?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796818, "assessment_type": "multiple-choice", "created": "2016-01-07T18:56:00Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>How\ndoes the park look after everyone cleans it up?</p>", "answers": ["all clean", "better", "very dirty", "dirtier"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T18:56:00Z", "section": "", "question_plain": "How\ndoes the park look after everyone cleans it up?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 796820, "assessment_type": "multiple-choice", "created": "2016-01-07T18:56:31Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>Are\nthey coming back to the park again?</p>", "answers": ["Yes, to play with their friends", "Yes, to clean the park again", "No, the park is already clean", "They will go to another park"], "relatedLectureIds": ""}, "correct_response": ["b"], "updated": "2016-01-07T18:56:31Z", "section": "", "question_plain": "Are\nthey coming back to the park again?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

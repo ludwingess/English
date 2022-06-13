@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>023 Traduce frases del inglés al español</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 798120, "assessment_type": "multiple-choice", "created": "2016-01-08T20:47:49Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Estoy entendiendo hablar ingles", "Estoy aprendiendo a hablar ingles", "Yo aprendo a hablar ingles"], "question": "<p>I am learning to speak in English</p>"}, "correct_response": ["b"], "updated": "2016-01-08T20:47:49Z", "section": "", "question_plain": "I am learning to speak in English", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798122, "assessment_type": "multiple-choice", "created": "2016-01-08T20:50:26Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>Don\u00b4t forget to bring your books</p>", "relatedLectureIds": "", "answers": ["No te olvides de comprar tus libros", "No te olvides de cuidar tus libros", "No te olvides de traer tus libros"]}, "correct_response": ["c"], "updated": "2016-01-08T20:50:26Z", "section": "", "question_plain": "Don\u00b4t forget to bring your books", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798124, "assessment_type": "multiple-choice", "created": "2016-01-08T20:51:31Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["No hay nada debajo de la mesa", "Hay algo debajo de la mesa", "Hay algo cerca de la mesa"], "question": "<p>There is nothing under the table</p>"}, "correct_response": ["a"], "updated": "2016-01-08T20:51:31Z", "section": "", "question_plain": "There is nothing under the table", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798126, "assessment_type": "multiple-choice", "created": "2016-01-08T20:52:07Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["No creo a nadie", "No veo a nadie", "No veo a nada"], "question": "<p>I don\u00b4t see anybody</p>"}, "correct_response": ["b"], "updated": "2016-01-08T20:52:07Z", "section": "", "question_plain": "I don\u00b4t see anybody", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798128, "assessment_type": "multiple-choice", "created": "2016-01-08T20:53:54Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["Coge un taxi para ir al aeropuerto", "Cog\u00ed un taxi para ir al aeropuerto", "Fu\u00ed a por un taxi para ir al aeropuerto"], "question": "<p>Take a taxi to go to the airport!</p>"}, "correct_response": ["a"], "updated": "2016-01-08T20:53:54Z", "section": "", "question_plain": "Take a taxi to go to the airport!", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798130, "assessment_type": "multiple-choice", "created": "2016-01-08T20:54:49Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>The cat is hiding behind the bed</p>", "relatedLectureIds": "", "answers": ["El gato se esconde detras del sofa", "El gato se esta escondiendo detras del sofa", "El gato se esta escondiendo debajo del sofa"]}, "correct_response": ["b"], "updated": "2016-01-08T20:54:49Z", "section": "", "question_plain": "The cat is hiding behind the bed", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 798132, "assessment_type": "multiple-choice", "created": "2016-01-08T20:57:14Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": "", "question": "<p>I hope to taste your food</p>", "answers": ["Espero pedir tu comida", "Espero probar tu comida", "Prefiero probar tu comida"]}, "correct_response": ["b"], "updated": "2016-01-08T20:57:14Z", "section": "", "question_plain": "I hope to taste your food", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>
